@@ -20,7 +20,7 @@ app.use(express.static("public"));
 // =============================================================
 // require("./routes/html-routes.js")(app);
 // require("./routes/author-api-routes.js")(app);
-require("./routes/boardGames-api.js")(app);
+require("./routes/boardGames-api-routes.js")(app);
 
 
 // Syncing our sequelize models and then starting our Express app
