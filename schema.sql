@@ -2,9 +2,17 @@ CREATE DATABASE game_db;
 USE game_db;
 
 
--- DESCRIBE boardGames;
--- SELECT * FROM boardGames;
+DESCRIBE boardGames;
 
+SELECT * FROM boardGames;
+
+
+
+
+
+
+
+-- OLD (don't use):
 -- INSERT INTO boardGames (gameName ,category,age,minPlayer,maxPlayer,timeToPlay,timetolearn) 
 -- VALUES ("7 Wonders", "Strategy",10,2,2,30,60);
 -- INSERT INTO boardGames (gameName ,category,age,minPlayer,maxPlayer) 

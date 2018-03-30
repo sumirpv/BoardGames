@@ -4,16 +4,16 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       },
-    //   gameType: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false
-    //   },
-      category: {
-        type: DataTypes.STRING,
+      category_id: {
+        type: DataTypes.INTEGER,
         allowNull: false
       },
-      age: {
+      age_id: {
         type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      difficulty: {
+        type: DataTypes.STRING,
         allowNull: false
       },
      minPlayer: {
@@ -26,16 +26,26 @@ module.exports = function(sequelize, DataTypes) {
       },
       timeToPlay: {
         type: DataTypes.INTEGER,
-        defaultValue: 60
+        defaultValue: 60,
+        allowNull: false
       },
-      timetolearn:{
-          type: DataTypes.INTEGER,
-          defaultValue : 45
-      }
-    },
+      manufacturer:{
+          type: DataTypes.STRING,
+          allowNull: false
+      },
+      year:{
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      img:{
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      },
     {
     timestamps : false
     });
     return BoardGames;
   };
+
   

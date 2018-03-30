@@ -1,9 +1,17 @@
--- INSERT INTO boardGames (gameName, category_id, age_range, minPlayer, maxPlayer, timeToPlay, difficulty) 
--- VALUES ("Scrabble", 1, 10, 2, 4, 90, 10);
--- INSERT INTO boardGames (gameName, category_id, age, minPlayer, maxPlayer, timeToPlay, difficulty) 
--- VALUES ("Scrabble", 2, 10, "4+", 4, 90, 10);
+INSERT INTO boardGames (gameName, category_id, age_range, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
+VALUES ("Scrabble", 1, 1, "Intermediate", 2, 4, 90, "Hasbro", 1938, "https://upload.wikimedia.org/wikipedia/commons/5/5d/Scrabble_game_in_progress.jpg");
 
--- INSERT INTO category (type) 
--- VALUES (family);
--- INSERT INTO category (type) 
--- VALUES (word_game);
+INSERT INTO boardGames (gameName, category_id, age, minPlayer, maxPlayer, timeToPlay, difficulty) 
+VALUES ("Scrabble", 2, 2, "Intermediate", 2, 4, 90, "Hasbro", 1938, "https://upload.wikimedia.org/wikipedia/commons/5/5d/Scrabble_game_in_progress.jpg");
+
+INSERT INTO category (name)
+VALUES ("Family");
+
+INSERT INTO category (name) 
+VALUES ("Word Game");
+
+INSERT INTO age_range (range) 
+VALUES ("8 - 13 years old");
+
+INSERT INTO age_range (range) 
+VALUES ("13 years and up");
