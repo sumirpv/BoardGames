@@ -11,7 +11,7 @@ module.exports = function(app) {
     app.post("/api/new", function(req, res) {
         db.boardGames.findAll({
             where: {
-                category: req.body.category
+                category_id: req.body.category
             }
         }).then(function(result) {
             console.log(result)
