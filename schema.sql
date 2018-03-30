@@ -16,6 +16,6 @@ USE game_db;
 -- INSERT INTO boardGames (gameName ,category,age,minPlayer,maxPlayer,timeToPlay,timetolearn) 
 -- VALUES ("Jenga", "Kids",10,2,2,30,60);
 -- INSERT INTO boardGames (gameName ,category,age,minPlayer,maxPlayer,timeToPlay,timetolearn) 
--- VALUES ("Spot it", "Party",7,2,8,15,5);
+-- VALUES ("Spot it", "Party",7,2,8,15,5);z
 -- INSERT INTO boardGames (gameName ,category,age,minPlayer,maxPlayer,timeToPlay,timetolearn) 
 -- VALUES ("Scrabble", "Family",10,2,4,90,10);
