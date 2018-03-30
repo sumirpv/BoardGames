@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BORED Games!!</title>
     <!-- Latest compiled and minified CSS & JS -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
     
@@ -23,33 +23,38 @@
                 <h4>Are you BORED and wanna play a BOARD game?</h4>
             </div>
         </div>
-
         <!-- Row 2 -->
         <div class="row">
             <!-- Column 1 -->
-            <div class="col-lg-12">
+            <div class="col-lg-8">
                 <h2>Search BORED Games</h2>
-                <form class="game-questions" action="/action_page.php">
+                <form class="game-questions">
                     <fieldset>
                         <legend>Questions:</legend>
                         Category?<br>
-                        <input type="text" name="category" value="">
+                        <input type="text" name="category" id="category" value="">
                         <br>
                         # of Players?<br>
-                        <input type="text" name="num-players" value="">
+                        <input type="text" name="num-players" id="num-players" value="">
                         <br>
-                        Difficulty?<br>
-                        <input type="text" name="difficulty" value="">
+                        Age and up?<br>
+                        <input type="text" name="age" id="age" value="">
                         <br>
                         Time to play?<br>
-                        <input type="text" name="time-play" value="">
+                        <input type="text" name="time-play" id="time-play" value="">
                         <br>
                         Time to Learn?<br>
-                        <input type="text" name="time-learn" value="">
+                        <input type="text" name="time-learn" id="time-learn" value="">
                         <br><br>
-                        <input type="submit" value="Submit">
+                        <input type="submit" id="submit-btn" value="Submit">
                     </fieldset>
                 </form>
+            </div>
+            <!-- Column 2 -->
+            <div class="col-lg-4">
+                <h2>You Should Play:</h2>
+                <hr>
+                <div class="game-area"></div>
             </div>
         </div>
     </div>
@@ -59,6 +64,6 @@
             Copyright &copy; 2018 The Greatest Development Team EVER!
         </div>
     </footer> 
-
+<script src="assets/js/index.js" type="text/javascript"></script>
 </body>
 </html>

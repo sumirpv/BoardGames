@@ -1,4 +1,3 @@
-
 var express = require("express");
 var bodyParser = require("body-parser");
 
@@ -21,7 +20,8 @@ app.use(express.static("public"));
 // =============================================================
 // require("./routes/html-routes.js")(app);
 // require("./routes/author-api-routes.js")(app);
-// require("./routes/post-api-routes.js")(app);
+require("./routes/boardGames-api.js")(app);
+
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
