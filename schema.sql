@@ -1,6 +1,6 @@
 CREATE DATABASE game_db;
-USE game_db;
 
+USE game_db;
 
 DESCRIBE boardGames;
 

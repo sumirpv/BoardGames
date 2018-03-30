@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.INTEGER,
         allowNull: false
       },
-      age_id: {
+      age_range: {
         type: DataTypes.INTEGER,
         allowNull: false
       },
@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       },
-     minPlayer: {
+      minPlayer: {
         type: DataTypes.INTEGER,
         allowNull: false
       },
