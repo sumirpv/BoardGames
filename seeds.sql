@@ -99,3 +99,11 @@ VALUES ("13 Years and Up");
 
 
 -- //testing
+
+select * from boardGames;
+
+select * from ages;
+select * from categorys;
+
+INSERT INTO categorys (name)
+VALUES ("Family"), ("Kids"), ("Adults"), ("Party"), ("Card Game"), ("Dice"), ("Educational"), ("Memory Game"), ("Word Game"), ("Dexterity"), ("Humor"), ("Math"), ("Military"), ("Strategy"), ("Puzzle"), ("Miniatures");

@@ -45,6 +45,14 @@ module.exports = function(sequelize, DataTypes) {
     {
     timestamps : false
     });
+    //saying boardGames has many Category 
+    BoardGames.associate = function(models) {
+    
+      BoardGames.hasMany(models.category, {
+        onDelete: "cascade"
+      });
+    }
+
     return BoardGames;
   };
 

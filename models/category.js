@@ -8,6 +8,14 @@ module.exports = function(sequelize, DataTypes) {
     {
     timestamps : false
     });
+    Category.associate = function(models) {
+
+      Category.belongsTo(models.boardGames, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    };
     return Category;
   };
 
