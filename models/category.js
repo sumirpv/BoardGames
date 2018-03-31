@@ -8,6 +8,14 @@ module.exports = function(sequelize, DataTypes) {
     {
     timestamps : false
     });
+    Category.associate = function(models) {
+
+      Category.belongsTo(models.boardGames, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    };
     return Category;
   };
 
@@ -22,6 +30,7 @@ dice
 educational
 memory_game
 word_game
+action_game
 dexterity
 humor
 math

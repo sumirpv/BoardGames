@@ -59,4 +59,3 @@ VALUES ("Twister", 2, 2, "Simple", 2, 4, 10, "Hasbro", 1966,  "https://cdn.shopi
 
 INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
 VALUES ("Twister", 10, 3, "Simple", 2, 4, 10, "Hasbro", 1966,  "https://cdn.shopify.com/s/files/1/1911/5793/products/HG98831lg_1024x1024.jpg?v=1506010693");
-
