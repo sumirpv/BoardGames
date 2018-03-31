@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Categories = sequelize.define("categories", {
+    var Category = sequelize.define("category", {
         name: {
         type: DataTypes.STRING,
         allowNull: false
@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
     {
     timestamps : false
     });
-    return Categories;
+    return Category;
   };
 
 /* category options for games:
