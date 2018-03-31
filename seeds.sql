@@ -96,18 +96,6 @@ VALUES ("Dexterity");
 INSERT INTO age_range (range)
 VALUES ("8 - 13 years old");
 
-<<<<<<< HEAD
-INSERT INTO age_range (range) 
-VALUES ("13 years and up");
 
-
-USE game_db;
-
-INSERT INTO categories (name)
-VALUES ("Family"),("Kids"),("Party");
-
-select* from categories;
-=======
 INSERT INTO age_range (range)
 VALUES ("13 Years and Up");
->>>>>>> 22d14b676f2dc8c5d8ac274c5fa8a39af9954d42
