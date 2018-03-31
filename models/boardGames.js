@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.INTEGER,
         allowNull: false
       },
-      age_range: {
+      age_id: {
         type: DataTypes.INTEGER,
         allowNull: false
       },
