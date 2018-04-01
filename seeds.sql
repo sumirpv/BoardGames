@@ -114,7 +114,7 @@ INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, ma
 VALUES ("DC Deck Building Game", 14, 3, "Complex", 2, 5, 45, "Cryptozoic Entertainment", 2012, "https://images-na.ssl-images-amazon.com/images/I/51wriVray4L._SX355_.jpg");
 
 
-INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
+INSERT INTO boardGames (gameName, category_id, age_id,  , minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
 VALUES ("Dixit", 1, 1, "Simple", 3, 6, 30, "Asmodee", 2008, "https://cdn.shopify.com/s/files/1/1911/5793/products/dix01_mock_1024x1024.png?v=1507667052");
 
 INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 

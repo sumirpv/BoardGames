@@ -58,6 +58,7 @@ $(document).ready(function() {
                 chosenGame.append("<tr><td>"+"Game Name: " + data[i].gameName + "</td></tr>");
                 chosenGame.append("<tr><td>"+"Category: " + data[i].category.name + "</td></tr>");
                 chosenGame.append("<tr><td>"+"Suggested Age Range:" + data[i].age.age_range + "</td></tr>");
+                chosenGame.append("<tr><td>"+"Difficulty Level: " + data[i].difficulty + "</td></tr>");
                 chosenGame.append("<tr><td>"+"Minimum Players: " + data[i].minPlayer + "</td></tr>");
                 chosenGame.append("<tr><td>"+"Maximum Players: " + data[i].maxPlayer + "</td></tr>");
                 chosenGame.append("<tr><td>"+"Average Time Needed to Play: " + data[i].timeToPlay + "</td></tr>");
