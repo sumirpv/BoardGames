@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Age = sequelize.define("age", {
-        range: {
+        age_range: {
         type: DataTypes.STRING,
         allowNull: false
       },

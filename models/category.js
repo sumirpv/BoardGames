@@ -10,10 +10,8 @@ module.exports = function(sequelize, DataTypes) {
     });
     Category.associate = function(models) {
 
-      Category.belongsTo(models.boardGames, {
-        foreignKey: {
-          allowNull: false
-        }
+      Category.hasMany(models.boardGames, {
+        foreignKey: "category_id"
       });
     };
     return Category;

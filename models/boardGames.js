@@ -48,8 +48,8 @@ module.exports = function(sequelize, DataTypes) {
     //saying boardGames has many Category 
     BoardGames.associate = function(models) {
     
-      BoardGames.hasMany(models.category, {
-        onDelete: "cascade"
+      BoardGames.belongsTo(models.category, {
+        foreignKey:"category_id"
       });
     }
 

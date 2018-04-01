@@ -56,6 +56,7 @@ $(document).ready(function() {
                 // chosenGame.append("Year: "+data[i].year+"<br>");
                 // chosenGame.append("image: "+data[i].img+"<br><br><br>");
                 chosenGame.append("<tr><td>"+"Game Name: " + data[i].gameName + "</td></tr>");
+                chosenGame.append("<tr><td>"+"Category: " + data[i].category.name + "</td></tr>");
                 chosenGame.append("<tr><td>"+"Suggested Age Range:" + data[i].age_id + "</td></tr>");
                 chosenGame.append("<tr><td>"+"Minimum Players: " + data[i].minPlayer + "</td></tr>");
                 chosenGame.append("<tr><td>"+"Maximum Players: " + data[i].maxPlayer + "</td></tr>");
