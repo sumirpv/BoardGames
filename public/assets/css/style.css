@@ -1,0 +1,19 @@
+
+
+.dropdown-list {
+    list-style-type: none;
+    list-style: none;
+}
+
+.dropdown-item {
+    display: inline;
+}
+
+#submit-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+.footer {
+    text-align: center;
+}
