@@ -11,13 +11,21 @@ module.exports = function(app) {
 
 
     app.post("/api/new", function(req, res) {
-        console.log("da",req.body.category)
+        console.log("my category",req.body.category);
+        console.log("age range ",req.body.age);
+
         db.boardGames.findAll({
             include:[
                 {
                     model : db.category,
                     where: {
                         name: req.body.category
+                    }
+                },
+                {
+                    model : db.age,
+                    where: {
+                        age_range: req.body.age
                     }
                 }
             ]

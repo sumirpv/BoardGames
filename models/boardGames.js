@@ -51,6 +51,9 @@ module.exports = function(sequelize, DataTypes) {
       BoardGames.belongsTo(models.category, {
         foreignKey:"category_id"
       });
+      BoardGames.belongsTo(models.age, {
+        foreignKey:"age_id"
+      });
     }
 
     return BoardGames;

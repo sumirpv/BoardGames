@@ -8,6 +8,12 @@ module.exports = function(sequelize, DataTypes) {
     {
     timestamps : false
     });
+    Age.associate = function(models) {
+
+      Age.hasMany(models.boardGames, {
+        foreignKey: "age_id"
+      });
+    };
     return Age;
   };
 
