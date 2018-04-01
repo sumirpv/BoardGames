@@ -2,7 +2,9 @@ var db = require("../models");
 
 module.exports = function(app) {
     app.get("/api/boardGames", function(req, res) {
-        db.boardGames.findAll({}).then(function(data) {
+        db.boardGames.findAll({
+            include:[db.Category]
+        }).then(function(data) {
             res.json(data);
         });
     });
@@ -10,9 +12,9 @@ module.exports = function(app) {
 
     app.post("/api/new", function(req, res) {
         db.boardGames.findAll({
-            where: {
-                category_id: req.body.category
-            }
+            // where: {
+            //     category_id: req.body.category
+            // }
         }).then(function(result) {
             console.log(result)
             res.json(result);
