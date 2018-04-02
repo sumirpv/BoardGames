@@ -14,7 +14,8 @@ module.exports = function(app) {
         console.log("my category",req.body.category);
         console.log("age range ",req.body.age);
         console.log("difficulty ",req.body.difficulty);
-        console.log("numPlayers  ", req.body.numPlayers);
+        // console.log("numPlayers  ", req.body.numPlayers);
+        console.log("gameplay length: " + req.body.timeToPlay);
 
 
         db.boardGames.findAll({
@@ -34,13 +35,18 @@ module.exports = function(app) {
             ],
                 where:{
                     difficulty : req.body.difficulty,
-                    minPlayer :{
-                        $gte :  req.body.numPlayers 
-                    }
-                    ,
-                    maxPlayer:{
-                        $lte : req.body.numPlayers
-                    }
+                    // minPlayer :{
+                    //     $gte :  req.body.numPlayers 
+                    // }
+                    // ,
+                    // maxPlayer:{
+                    //     $lte : req.body.numPlayers
+                    // }
+                    
+                    // timeToPlay : {
+                    //     $lte: req.body.timeToPlay
+                    // }
+                    
                 }
 
         }).then(function(result) {

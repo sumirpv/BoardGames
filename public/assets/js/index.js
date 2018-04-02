@@ -14,7 +14,7 @@ $(document).ready(function() {
             category: $("#category").val().trim(),
             age: $("#age").val().trim(),
             difficulty: $("#difficulty").val().trim(),
-             numPlayers: $("#num-players").val().trim(),
+            numPlayers: $("#num-players").val().trim(),
             timeToPlay: $("#time-play").val().trim()
         }
 
@@ -44,9 +44,9 @@ $(document).ready(function() {
                 console.log("Minimum Players Needed: " + data[i].minPlayer);
                 console.log("Maximum Players Needed: " + data[i].maxPlayer);
                 console.log("Average Time Needed to Play: " + data[i].timeToPlay);
-                console.log("Manufacturer: "+data[i].manufacturer);
-                console.log("Year: "+data[i].year);
-                console.log("image: "+data[i].img);
+                console.log("Manufacturer: "+ data[i].manufacturer);
+                console.log("Year: "+ data[i].year);
+                console.log("image: "+ data[i].img);
                 // chosenGame.append("Game Name: " + data[i].gameName + "<br>");
                 // chosenGame.append("Suggested Minimum Age??" + data[i].age_id + "<br>");
                 // chosenGame.append("Minimum Players: " + data[i].minPlayer + "<br>");
@@ -62,9 +62,9 @@ $(document).ready(function() {
                 chosenGame.append("<tr><td>"+"Minimum Players: " + data[i].minPlayer + "</td></tr>");
                 chosenGame.append("<tr><td>"+"Maximum Players: " + data[i].maxPlayer + "</td></tr>");
                 chosenGame.append("<tr><td>"+"Average Time Needed to Play: " + data[i].timeToPlay + "</td></tr>");
-                chosenGame.append("<tr><td>"+"Manufacturer: "+data[i].manufacturer+"</td></tr>");
-                chosenGame.append("<tr><td>"+"Year: "+data[i].year+"</td></tr>");
-                chosenGame.append("<tr><td><img src='"+data[i].img+"'/></td></tr>");
+                chosenGame.append("<tr><td>"+"Manufacturer: "+ data[i].manufacturer+"</td></tr>");
+                chosenGame.append("<tr><td>"+"Year: "+ data[i].year+"</td></tr>");
+                chosenGame.append("<tr><td><img src='"+ data[i].img+"'/></td></tr>");
                 chosenGame.append("<tr><td>"+"<br>"+"</tr></td>");
 
                 $(".game-area").append(chosenGame);
