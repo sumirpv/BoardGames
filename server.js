@@ -18,7 +18,7 @@ app.use(express.static("public"));
 
 // Routes
 // =============================================================
-// require("./routes/html-routes.js")(app);
+require("./routes/html-routes.js")(app);
 // require("./routes/author-api-routes.js")(app);
 require("./routes/boardGames-api-routes.js")(app);
 
