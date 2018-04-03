@@ -46,14 +46,12 @@ module.exports = function(app) {
     });
 
     // POST route for saving a new game
-    // app.post("/api/boardGames", function(req, res) {
-    //     console.log(req.body);
-    //     db.boardGames.create({
-    //         gameName : req.body.gameName,
-    //         // category_id : req.body,
-    //     })
-
-    // })
+    app.post("/api/boardGames", function(req, res) {
+        // console.log(req.body);
+        db.BoardGames.create(req.body).then(function(dbBoardGames) {
+            res.json(dbBoardGames);
+        });
+    });
 
     
     app.post("/api/new", function(req, res) {
