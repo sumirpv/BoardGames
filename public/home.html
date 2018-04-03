@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Aldrich|Bangers|Share+Tech+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aldrich|Bangers|Black+Ops+One|Share+Tech+Mono" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -24,27 +24,57 @@
 <body>
 
     <!-- Main Container -->
-    <div class="container-fluid">
+    <div class="inner-body container-fluid">
+
         <!-- Row 1 -->
         <div class="row heading">
             <!-- Column 1 -->
             <div>
                 <h1 class="heading-title">Board Game Discovery</h1>
-                <!-- <h1 class="heading-title2">Board Game Discovery</h1> -->
-                <!-- <h4>Are you BORED and wanna play a BOARD game?</h4> -->
                 <h4 class="heading-subtitle">The Quest for the Perfect Game</h4>
             </div>
-            <a id="add-game" href="/addgame">Post a Game</a>
         </div>
+
         <!-- Row 2 -->
-        <div class="row">
-            <!-- Column 1 -->
-            <div class="col-lg-12 match-title">
-                <h2>Find Your Perfect Board Game Match</h2>
-                <div class="dropdown-container">
-                    <ul class="dropdown-ul">
+        <div class="row dropdown-container">
+            <div class="row">
+                <div class="col-lg-1 full-dropdown">
+                </div>
+                <div class="col-lg-2 full-dropdown">
+                    <p>
+                        <h4 class="dropdown-title">Category</h4>
+                    </p>
+                </div>
+                <div class="col-lg-2 full-dropdown">
+                    <p>
+                        <h4 class="dropdown-title">Age Group</h4>
+                    </p>
+                </div>
+                <div class="col-lg-2 full-dropdown">
+                    <p>
+                        <h4 class="dropdown-title">Difficulty Level</h4>
+                    </p>
+                </div>
+                <div class="col-lg-2 full-dropdown">
+                    <p>
+                        <h4 class="dropdown-title">Number of Players</h4>
+                    </p>
+                </div>
+                <div class="col-lg-2 full-dropdown">
+                    <p>
+                        <h4 class="dropdown-title">Play Time (Minutes)</h4>
+                    </p>
+                </div>
+                <div class="col-lg-1 full-dropdown">
+                </div>
+            </div>
+            <!-- Row 3 -->
+            <div class="row">
+                <div class="col-lg-1 full-dropdown">
+                </div>
+                <ul class="dropdown-ul">
+                    <div class="col-lg-2 full-dropdown">
                         <li class="dropdown-li">
-                            <h4>Category</h4>
                             <select data-placeholder="" class="chosen-select" name="category" id="category">
                                 <option class="drop-down choose" value="" selected disabled>Choose</option>
                                 <option class="drop-down" value="Adults">Adults</option>
@@ -61,13 +91,14 @@
                                 <option class="drop-down" value="Military">Military</option>
                                 <option class="drop-down" value="Miniatures">Miniatures</option>
                                 <option class="drop-down" value="Party">Party</option>
-                                <option class="drop-down" value="Puzzle">Puzzle</option>                 
+                                <option class="drop-down" value="Puzzle">Puzzle</option>
                                 <option class="drop-down" value="Strategy">Strategy</option>
                                 <option class="drop-down" value="Word Game">Word Game</option>
                             </select>
                         </li>
+                    </div>
+                    <div class="col-lg-2 full-dropdown">
                         <li class="dropdown-li">
-                            <h4>Age Group</h4>
                             <select data-placeholder="" class="chosen-select" name="age" id="age">
                                 <option class="drop-down choose" value="" selected disabled>Choose</option>
                                 <option class="drop-down" value="Less than 8 years old">Less than 8 years old</option>
@@ -76,8 +107,9 @@
                                 <option class="drop-down" value="Adult Games Only">Adult Games Only</option>
                             </select>
                         </li>
+                    </div>
+                    <div class="col-lg-2 full-dropdown">
                         <li class="dropdown-li">
-                            <h4>Difficulty Level</h4>
                             <select data-placeholder="" class="chosen-select" name="difficulty" id="difficulty">
                                 <option class="drop-down choose" value="" selected disabled>Choose</option>
                                 <option class="drop-down" value="Simple">Simple</option>
@@ -85,8 +117,9 @@
                                 <option class="drop-down" value="Complex">Complex</option>
                             </select>
                         </li>
+                    </div>
+                    <div class="col-lg-2 full-dropdown">
                         <li class="dropdown-li">
-                            <h4>Number of Players</h4>
                             <select data-placeholder="" class="chosen-select" name="num-players" id="num-players">
                                 <option class="drop-down choose" value="" selected disabled>Choose</option>
                                 <option class="drop-down" value="1">1</option>
@@ -98,35 +131,42 @@
                                 <option class="drop-down" value="7 +">7 +</option>
                             </select>
                         </li>
+                    </div>
+                    <div class="col-lg-2 full-dropdown">
                         <li class="dropdown-li">
-                            <h4>Play Time (Minutes)</h4>
                             <select data-placeholder="" class="chosen-select" name="time-play" id="time-play">
                                 <option class="drop-down choose" value="" selected disabled>Choose</option>
-                                <option class="drop-down" value="10 or less">10 or less</option>
-                                <option class="drop-down" value="10 - 20">10 - 20</option>
-                                <option class="drop-down" value="20 - 30">20 - 30</option>
-                                <option class="drop-down" value="30 - 60">30 - 60</option>
-                                <option class="drop-down" value="60 +">60 +</option>
+                                <option class="drop-down" value="Less than 10">Less than 10</option>
+                                <option class="drop-down" value="10 - 19">10 - 19</option>
+                                <option class="drop-down" value="20 - 29">20 - 29</option>
+                                <option class="drop-down" value="30 - 59">30 - 59</option>
+                                <option class="drop-down" value="60 - 119">60 - 119</option>
+                                <option class="drop-down" value="120 +">120 +</option>
                             </select>
                         </li>
-                    </ul>
-                    <button type="submit" id="submit-btn" value="Submit">Submit</button>
-                    <button type="reset" id="reset-btn" value="Reset">Clear</button>
-                    <hr>
+                    </div>
+                </ul>
+                <div class="col-lg-1 full-dropdown">
                 </div>
+                <button type="submit" id="submit-btn" value="Submit">Submit</button>
+                <button type="reset" id="reset-btn" value="Reset">Clear</button>
+                <hr>
             </div>
-            <!-- Column 2 -->
+
+
             <div class="col-lg-4">
-                <h2>You Should Play:</h2>
-                <div class="game-area"></div>
+                <div class="game-area">
+
+                </div>
             </div>
 
         </div>
     </div>
 
-    <footer>
-        <div class="footer">
-            Copyright &copy; 2018 The Greatest Development Team EVER!
+    <footer class="footer">
+        <div class="inner-footer">
+            Copyright &copy; 2018 Jenkins Noble Viswanathan
+            <a id="add-game" href="/addgame">Post a Game</a>
         </div>
     </footer>
 

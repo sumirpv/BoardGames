@@ -25,8 +25,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       },
       timeToPlay: {
-        type: DataTypes.INTEGER,
-        defaultValue: 60,
+        type: DataTypes.STRING,
         allowNull: false
       },
       manufacturer:{
