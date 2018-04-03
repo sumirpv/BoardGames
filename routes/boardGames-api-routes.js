@@ -1,6 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
+    // GET route for getting all of the games
     app.get("/api/boardGames", function(req, res) {
         db.boardGames.findAll({
            // include:[db.Category]
@@ -9,7 +10,29 @@ module.exports = function(app) {
         });
     });
 
+    // POST route for retrieving a single game
+    app.get("/api/boardGames/:gameName", function(req, res) {
+        db.boardGames.findAll({
+            where : {
+                gameName : req.params.gameName
+            },
+            // include : [db.]
+        }).then(function(dbBoardGames) {
+            res.json(dbBoardGames);
+        });
+    });
 
+    // POST route for saving a new game
+    // app.post("/api/boardGames", function(req, res) {
+    //     console.log(req.body);
+    //     db.boardGames.create({
+    //         gameName : req.body.gameName,
+    //         // category_id : req.body,
+    //     })
+
+    // })
+
+    
     app.post("/api/new", function(req, res) {
         
         console.log("my category",req.body.category);
