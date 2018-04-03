@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BORED Games</title>
+    <title>Board Game Discovery</title>
 
     <!-- Latest compiled and minified CSS & JS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
 
     <!-- Local Stylesheet CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Aldrich|Bangers|Share+Tech+Mono" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -21,49 +24,49 @@
 <body>
 
     <!-- Main Container -->
-    <div class="container">
+    <div class="container-fluid">
         <!-- Row 1 -->
-        <div class="row">
+        <div class="row heading">
             <!-- Column 1 -->
-            <div class="jumbotron">
-                <h1>BORED Games</h1>
-                <h4>Are you BORED and wanna play a BOARD game?</h4>
+            <div>
+                <h1 class="heading-title">Board Game Discovery</h1>
+                <!-- <h1 class="heading-title2">Board Game Discovery</h1> -->
+                <!-- <h4>Are you BORED and wanna play a BOARD game?</h4> -->
+                <h4 class="heading-subtitle">The Quest for the Perfect Game</h4>
             </div>
+            <a id="add-game" href="/addgame">Post a Game</a>
         </div>
         <!-- Row 2 -->
         <div class="row">
             <!-- Column 1 -->
-            <div class="col-lg-12">
+            <div class="col-lg-12 match-title">
                 <h2>Find Your Perfect Board Game Match</h2>
                 <div class="dropdown-container">
-                    <ul class="dropdown-list">
-                        <li class="dropdown-item">
+                    <ul class="dropdown-ul">
+                        <li class="dropdown-li">
                             <h4>Category</h4>
-
-                            <!-- alphabetize this! -->
                             <select data-placeholder="" class="chosen-select" name="category" id="category">
                                 <option class="drop-down choose" value="" selected disabled>Choose</option>
-                                <option class="drop-down" value="Family">Family</option>
-                                <option class="drop-down" value="Kids">Kids</option>
                                 <option class="drop-down" value="Adults">Adults</option>
-                                <option class="drop-down" value="Party">Party</option>
                                 <option class="drop-down" value="Card Game">Card Game</option>
-                                <option class="drop-down" value="Dice">Dice</option>
-                                <option class="drop-down" value="Educational">Educational</option>
-                                <option class="drop-down" value="Memory Game">Memory Game</option>
-                                <option class="drop-down" value="Word Game">Word Game</option>
                                 <option class="drop-down" value="Dexterity">Dexterity</option>
-                                <option class="drop-down" value="Humor">Humor</option>
-                                <option class="drop-down" value="Math">Math</option>
-                                <option class="drop-down" value="Military">Military</option>
-                                <option class="drop-down" value="Strategy">Strategy</option>
-                                <option class="drop-down" value="Puzzle">Puzzle</option>
-                                <option class="drop-down" value="Miniatures">Miniatures</option>
+                                <option class="drop-down" value="Dice">Dice</option>
                                 <option class="drop-down" value="Drawing">Drawing</option>
+                                <option class="drop-down" value="Educational">Educational</option>
+                                <option class="drop-down" value="Family">Family</option>
+                                <option class="drop-down" value="Humor">Humor</option>
+                                <option class="drop-down" value="Kids">Kids</option>
+                                <option class="drop-down" value="Math">Math</option>
+                                <option class="drop-down" value="Memory Game">Memory Game</option>
+                                <option class="drop-down" value="Military">Military</option>
+                                <option class="drop-down" value="Miniatures">Miniatures</option>
+                                <option class="drop-down" value="Party">Party</option>
+                                <option class="drop-down" value="Puzzle">Puzzle</option>                 
+                                <option class="drop-down" value="Strategy">Strategy</option>
+                                <option class="drop-down" value="Word Game">Word Game</option>
                             </select>
                         </li>
-                        <br>
-                        <li class="dropdown-item">
+                        <li class="dropdown-li">
                             <h4>Age Group</h4>
                             <select data-placeholder="" class="chosen-select" name="age" id="age">
                                 <option class="drop-down choose" value="" selected disabled>Choose</option>
@@ -73,8 +76,7 @@
                                 <option class="drop-down" value="Adult Games Only">Adult Games Only</option>
                             </select>
                         </li>
-                        <br>
-                        <li class="dropdown-item">
+                        <li class="dropdown-li">
                             <h4>Difficulty Level</h4>
                             <select data-placeholder="" class="chosen-select" name="difficulty" id="difficulty">
                                 <option class="drop-down choose" value="" selected disabled>Choose</option>
@@ -83,8 +85,7 @@
                                 <option class="drop-down" value="Complex">Complex</option>
                             </select>
                         </li>
-                        <br>
-                        <li class="dropdown-item">
+                        <li class="dropdown-li">
                             <h4>Number of Players</h4>
                             <select data-placeholder="" class="chosen-select" name="num-players" id="num-players">
                                 <option class="drop-down choose" value="" selected disabled>Choose</option>
@@ -97,8 +98,7 @@
                                 <option class="drop-down" value="7 +">7 +</option>
                             </select>
                         </li>
-                        <br>
-                        <li class="dropdown-item">
+                        <li class="dropdown-li">
                             <h4>Play Time (Minutes)</h4>
                             <select data-placeholder="" class="chosen-select" name="time-play" id="time-play">
                                 <option class="drop-down choose" value="" selected disabled>Choose</option>
@@ -109,17 +109,15 @@
                                 <option class="drop-down" value="60 +">60 +</option>
                             </select>
                         </li>
-                        <br>
-                        <br>
                     </ul>
-                    <input type="submit" id="submit-btn" value="Submit">
-                    <br>
+                    <button type="submit" id="submit-btn" value="Submit">Submit</button>
+                    <button type="reset" id="reset-btn" value="Reset">Clear</button>
+                    <hr>
                 </div>
             </div>
             <!-- Column 2 -->
             <div class="col-lg-4">
                 <h2>You Should Play:</h2>
-                <hr>
                 <div class="game-area"></div>
             </div>
 
