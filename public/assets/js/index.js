@@ -5,7 +5,16 @@ $(document).ready(function() {
     // var difficulty = $("#difficulty");
     // var timePlay = $("#time-play");
     // var timeLearn = $("#time-learn");
+ 
 
+    $("#reset-btn").on("click", function(){
+        $("#category").val(""),
+        $("#age").val(""),
+        $("#difficulty").val(""),
+        $("#num-players").val(""),
+        $("#time-play").val(""),
+        $(".game-area").remove();
+    });
     $("#submit-btn").on("click", function(event) {
         event.preventDefault();
         // console.log("clicked");
