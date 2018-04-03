@@ -54,62 +54,53 @@ $(document).ready(function() {
         console.log("Image URL: " + imageUrl);
 
         // Wont submit the post if we are missing a anything is left blank
-        // if (
-        //     !nameInput.val().trim() || 
-        //     !categoryInput.val() || 
-        //     !ageGroup.val() || 
-        //     !difficultyLevel.val() || 
-        //     !minimumPlayer.val().trim() || 
-        //     !maximumPlayer.val().trim() || 
-        //     !gameTime.val() || 
-        //     !manufacturerName.val().trim() || 
-        //     !releaseYear.val().trim() || 
-        //     !imageUrl.val().trim()
-        // ) {
-        //     return;
-        // }
+        if (
+            !nameInput || 
+            !categoryInput || 
+            !ageGroup || 
+            !difficultyLevel || 
+            !minimumPlayer || 
+            !maximumPlayer || 
+            !gameTime || 
+            !manufacturerName || 
+            !releaseYear || 
+            !imageUrl
+        ) {
+            return;
+        }
         // Constructing a newGame object to hand to the database
-        // var newGame = {
-        //     gameName : nameInput
-        //         .val()
-        //         .trim(),
-        //     category : categoryInput
-        //         .val(),
-        //         // .trim(),
-        //     age_range : ageGroup
-        //         .val(),
-        //         // .trim(),
-        //     difficulty : difficultyLevel
-        //         .val(),
-        //         // .trim(),
-        //     minPlayer : minimumPlayer
-        //         .val()
-        //         .trim(),
-        //     maxPlayer : maximumPlayer
-        //         .val()
-        //         .trim(),
-        //     timeToPlay : gameTime
-        //         .val(),
-        //         // .trim(),
-        //     manufacturer : manufacturerName
-        //         .val()
-        //         .trim(),
-        //     year : releaseYear
-        //         .val()
-        //         .trim(),
-        //     img : imageUrl
-        //         .val()
-        //         .trim(),
-        // }
+        var newGame = {
+            gameName : nameInput,
 
-        // submitGame(newGame);
+            category_id : categoryInput,
+
+            age_id : ageGroup,
+
+            difficulty : difficultyLevel,
+
+            minPlayer : minimumPlayer,
+
+            maxPlayer : maximumPlayer,
+
+            timeToPlay : gameTime,
+
+            manufacturer : manufacturerName,
+
+            year : releaseYear,
+
+            img : imageUrl,
+
+        }
+
+        submitGame(newGame);
     }
 
     // Submits a new post and brings user to home page upon completion
     function submitGame(game) {
-        $.post("/api/boardGames", game, function() {
+        $.post("/api/boardGamesSubmit", game, function() {
             alert("Added game successfully to database");
-            window.location.href = "/";
+            // window.location.href = "/";
+            location.reload();
         });
     }
 
