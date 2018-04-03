@@ -6,7 +6,7 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
-    
+
     // GET route for getting all of the games
     app.get("/api/boardGames", function(req, res) {
         db.boardGames.findAll({
@@ -53,7 +53,7 @@ module.exports = function(app) {
 
     // POST route for saving a new game
     app.post("/api/boardGames", function(req, res) {
-        // console.log(req.body);
+        console.log(req.body);
         db.BoardGames.create(req.body).then(function(dbBoardGames) {
             res.json(dbBoardGames);
         });

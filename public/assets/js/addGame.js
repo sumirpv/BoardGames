@@ -1,28 +1,10 @@
 $(document).ready(function() {
-    var createGameForm = $("#create-game");
-    var nameInput = $("#game-name");
-    var categoryInput = $("#category");
-    var ageGroup = $("#age");
-    var difficultyLevel = $("#difficulty");
-    var minimumPlayer = $("#min-player");
-    var maximumPlayer = $("#max-player");
-    var gameTime = $("#time-play");
-    var manufacturerName = $("#manufacturer");
-    var releaseYear = $("#year");
-    var imageUrl = $("#img-url");
 
+    var createGameForm = $("#create-game");
     // Adding an event listener for when the form is submitted
     $(createGameForm).on("submit", handleFormSubmit);
-    console.log("Game Name:  " + nameInput);
-    console.log("Category: " + categoryInput);
-    console.log("Age Group: " + ageGroup);
-    console.log("Difficulty: " + difficultyLevel);
-    console.log("Min. Players: " + minimumPlayer);
-    console.log("Max Players: " + maximumPlayer);
-    console.log("Time Length: " + gameTime);
-    console.log("Manufacturer: " + manufacturerName);
-    console.log("Released: " + releaseYear);
-    console.log("Image URL: " + imageUrl);
+
+
 
     // IS THIS COMMENTED INFO BELOW NEEDED?
     ////////////////////////////////////////////////////////////////////////////////////////////
@@ -47,56 +29,80 @@ $(document).ready(function() {
     // Function for handling what happens when the form to create a new post is submitted
     function handleFormSubmit(event) {
         event.preventDefault();
-        // Wont submit the post if we are missing a anything is left blank
-        if (
-            !nameInput.val().trim() || 
-            !categoryInput.val() || 
-            !ageGroup.val() || 
-            !difficultyLevel.val() || 
-            !minimumPlayer.val().trim() || 
-            !maximumPlayer.val().trim() || 
-            !gameTime.val() || 
-            !manufacturerName.val().trim() || 
-            !releaseYear.val().trim() || 
-            !imageUrl.val().trim()
-        ) {
-            return;
-        }
-        // Constructing a newGame object to hand to the database
-        var newGame = {
-            gameName : nameInput
-                .val()
-                .trim(),
-            category : categoryInput
-                .val(),
-                // .trim(),
-            age_range : ageGroup
-                .val(),
-                // .trim(),
-            difficulty : difficultyLevel
-                .val(),
-                // .trim(),
-            minPlayer : minimumPlayer
-                .val()
-                .trim(),
-            maxPlayer : maximumPlayer
-                .val()
-                .trim(),
-            timeToPlay : gameTime
-                .val(),
-                // .trim(),
-            manufacturer : manufacturerName
-                .val()
-                .trim(),
-            year : releaseYear
-                .val()
-                .trim(),
-            img : imageUrl
-                .val()
-                .trim(),
-        }
 
-        submitGame(newGame);
+
+        var nameInput = $("#game-name").val().trim();
+        var categoryInput = $("#category").val();
+        var ageGroup = $("#age").val();
+        var difficultyLevel = $("#difficulty").val();
+        var minimumPlayer = $("#min-player").val().trim();
+        var maximumPlayer = $("#max-player").val().trim();
+        var gameTime = $("#time-play").val();
+        var manufacturerName = $("#manufacturer").val().trim();
+        var releaseYear = $("#year").val().trim();
+        var imageUrl = $("#img-url").val().trim();
+        
+        console.log("Game Name:  " + nameInput);
+        console.log("Category: " + categoryInput);
+        console.log("Age Group: " + ageGroup);
+        console.log("Difficulty: " + difficultyLevel);
+        console.log("Min. Players: " + minimumPlayer);
+        console.log("Max Players: " + maximumPlayer);
+        console.log("Time Length: " + gameTime);
+        console.log("Manufacturer: " + manufacturerName);
+        console.log("Released: " + releaseYear);
+        console.log("Image URL: " + imageUrl);
+
+        // Wont submit the post if we are missing a anything is left blank
+        // if (
+        //     !nameInput.val().trim() || 
+        //     !categoryInput.val() || 
+        //     !ageGroup.val() || 
+        //     !difficultyLevel.val() || 
+        //     !minimumPlayer.val().trim() || 
+        //     !maximumPlayer.val().trim() || 
+        //     !gameTime.val() || 
+        //     !manufacturerName.val().trim() || 
+        //     !releaseYear.val().trim() || 
+        //     !imageUrl.val().trim()
+        // ) {
+        //     return;
+        // }
+        // Constructing a newGame object to hand to the database
+        // var newGame = {
+        //     gameName : nameInput
+        //         .val()
+        //         .trim(),
+        //     category : categoryInput
+        //         .val(),
+        //         // .trim(),
+        //     age_range : ageGroup
+        //         .val(),
+        //         // .trim(),
+        //     difficulty : difficultyLevel
+        //         .val(),
+        //         // .trim(),
+        //     minPlayer : minimumPlayer
+        //         .val()
+        //         .trim(),
+        //     maxPlayer : maximumPlayer
+        //         .val()
+        //         .trim(),
+        //     timeToPlay : gameTime
+        //         .val(),
+        //         // .trim(),
+        //     manufacturer : manufacturerName
+        //         .val()
+        //         .trim(),
+        //     year : releaseYear
+        //         .val()
+        //         .trim(),
+        //     img : imageUrl
+        //         .val()
+        //         .trim(),
+        // }
+
+        // submitGame(newGame);
     }
 
     // Submits a new post and brings user to home page upon completion
