@@ -37,14 +37,7 @@ module.exports = function(app) {
         // console.log("req.body: " + req.body);
         console.log("req.body.category_id: " + req.body.category_id);
         console.log("req.body.age_id: " + req.body.age_id);
-        db.boardGames.create(
-            req.body
-            // {
-            //     where : {
-            //         category_id : 
-            //     }
-            // }
-        ).then(function(dbBoardGames) {
+        db.boardGames.create(req.body).then(function(dbBoardGames) {
             res.json(dbBoardGames);
         });
     });
