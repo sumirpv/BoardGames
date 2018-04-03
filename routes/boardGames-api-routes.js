@@ -10,13 +10,25 @@ module.exports = function(app) {
         });
     });
 
-    // POST route for retrieving a single game
+    // GET route for retrieving a single game
     app.get("/api/boardGames/:gameName", function(req, res) {
         db.boardGames.findAll({
             where : {
                 gameName : req.params.gameName
             },
             // include : [db.]
+        }).then(function(dbBoardGames) {
+            res.json(dbBoardGames);
+        });
+    });
+
+    // GET route for retrieving all games by category ID
+    app.get("/api/boardGames/category/:category_id", function(req, res) {
+        db.boardGames.findAll({
+            where : {
+                category_id : req.params.category_id
+            },
+            // include : [db.]     
         }).then(function(dbBoardGames) {
             res.json(dbBoardGames);
         });
