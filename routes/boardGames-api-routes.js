@@ -34,6 +34,17 @@ module.exports = function(app) {
         });
     });
 
+    // GET route for retrieving all games by difficulty
+    app.get("/api/boardGames/difficulty/:difficulty", function(req, res) {
+        db.boardGames.findAll({
+            where : {
+                difficulty : req.params.difficulty
+            }
+        }).then(function(dbBoardGames) {
+            res.json(dbBoardGames);
+        });
+    });
+
     // POST route for saving a new game
     // app.post("/api/boardGames", function(req, res) {
     //     console.log(req.body);
