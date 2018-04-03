@@ -1,6 +1,12 @@
+// Dependencies
+// =============================================================
 var db = require("../models");
 
+
+// Routes
+// =============================================================
 module.exports = function(app) {
+    
     // GET route for getting all of the games
     app.get("/api/boardGames", function(req, res) {
         db.boardGames.findAll({
