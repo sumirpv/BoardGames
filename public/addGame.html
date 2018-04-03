@@ -33,17 +33,93 @@
         <!-- Row 2 -->
         <div class="row">
             <!-- Column 1 -->
-            <div class="col-lg-12">
-                Name of Game
-                Category
-                Age Range
-                Difficulty
-                Minimum Players
-                Maximum Players
-                Avg. Time to Complete
-                Manufacturer
-                Year Released
-                Game Image
+            <div class="col-lg-6">
+                <form>
+                    <div class="form-group">
+                        <label for="game-name">Name of Game</label>
+                        <input type="text" class="form-control" id="game-name" placeholder="Name">
+                    </div>
+                    <div class-"form-group">
+                        <h4>Category</h4>
+                        <select data-placeholder="" class="chosen-select" name="category" id="category">
+                            <option class="drop-down choose" value="" selected disabled>Choose</option>
+                            <option class="drop-down" value="Adults">Adults</option>
+                            <option class="drop-down" value="Card Game">Card Game</option>
+                            <option class="drop-down" value="Dexterity">Dexterity</option>
+                            <option class="drop-down" value="Dice">Dice</option>
+                            <option class="drop-down" value="Drawing">Drawing</option>
+                            <option class="drop-down" value="Educational">Educational</option>
+                            <option class="drop-down" value="Family">Family</option>
+                            <option class="drop-down" value="Humor">Humor</option>
+                            <option class="drop-down" value="Kids">Kids</option>
+                            <option class="drop-down" value="Math">Math</option>
+                            <option class="drop-down" value="Memory Game">Memory Game</option>
+                            <option class="drop-down" value="Military">Military</option>
+                            <option class="drop-down" value="Miniatures">Miniatures</option>
+                            <option class="drop-down" value="Party">Party</option>
+                            <option class="drop-down" value="Puzzle">Puzzle</option>                 
+                            <option class="drop-down" value="Strategy">Strategy</option>
+                            <option class="drop-down" value="Word Game">Word Game</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <h4>Age Group</h4>
+                        <select data-placeholder="" class="chosen-select" name="age" id="age">
+                            <option class="drop-down choose" value="" selected disabled>Choose</option>
+                            <option class="drop-down" value="Less than 8 years old">Less than 8 years old</option>
+                            <option class="drop-down" value="8 - 13 years old">8 - 13 years old</option>
+                            <option class="drop-down" value="13 Years and Up">13 Years and Up</option>
+                            <option class="drop-down" value="Adult Games Only">Adult Games Only</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h4>Difficulty Level</h4>
+                        <select data-placeholder="" class="chosen-select" name="difficulty" id="difficulty">
+                            <option class="drop-down choose" value="" selected disabled>Choose</option>
+                            <option class="drop-down" value="Simple">Simple</option>
+                            <option class="drop-down" value="Intermediate">Intermediate</option>
+                            <option class="drop-down" value="Complex">Complex</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="min-player">Minimum Players</label>
+                        <input type="text" class="form-control" id="min-player" placeholder="Minimum Players">
+                    </div>
+                    <div class="form-group">
+                        <label for="max-player">Maximum Players</label>
+                        <input type="text" class="form-control" id="max-player" placeholder="Maximum Players">
+                    </div>
+                    <div class="form-group">
+                        <h4>Gameplay Time (in minutes)</h4>
+                        <select data-placeholder="" class="chosen-select" name="time-play" id="time-play">
+                            <option class="drop-down choose" value="" selected disabled>Choose</option>
+                            <option class="drop-down" value="10 or less">10 or less</option>
+                            <option class="drop-down" value="10 - 20">10 - 20</option>
+                            <option class="drop-down" value="20 - 30">20 - 30</option>
+                            <option class="drop-down" value="30 - 60">30 - 60</option>
+                             <option class="drop-down" value="60 +">60 +</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="manufacturer">Name of Manufacturer</label>
+                        <input type="text" class="form-control" id="manufacturer" placeholder="Manufacturer">
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year Released</label>
+                        <input type="text" class="form-control" id="year" placeholder="Year of Release : YYYY">
+                    </div>
+                    <div class="form-group">
+                        <label for="img-url">Game Image URL</label>
+                        <input type="text" class="form-control" id="img-url" placeholder="Game Image URL : https://image-url.com">
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Add Game</button>
+                        </div>
+                    </div>
+                </form>
+                    
             </div>
         </div>
     </div>
