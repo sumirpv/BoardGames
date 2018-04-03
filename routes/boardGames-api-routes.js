@@ -123,6 +123,18 @@ module.exports = function(app) {
                 res.json(result);
             });
         }
+        });
+
+        // get route for timePlayid only search
+        app.post("/api/boardGames/timePlay/:timePlayid", function(req,res){
+            console.log(" new play time id",req.params.timePlayid);
+            if( req.params.timePlayid){
+                db.sequelize.query("select * from boardGames as b inner join categories as c on b.category_id = c.id inner join ages as a on b.age_id = a.id where timeToPlay ='"+ req.params.timePlayid+"'", {  type: db.sequelize.QueryTypes.SELECT })
+                .then(function(result) {
+                console.log("time to play  ",result);
+                res.json(result);
+            });
+        }
         })
 
     app.post("/api/new", function(req, res) {
@@ -146,8 +158,8 @@ module.exports = function(app) {
         // });
 
         //console.log("datatee",db);
-        db.sequelize.query("select * from boardGames as b inner join categories as c on b.category_id = c.id inner join ages as a on b.age_id = a.id where c.name = ? and age_range = ? and difficulty = ? and "+req.body.numPlayers+ " between minPlayer and maxPlayer ", { replacements: [req.body.category ,req.body.age ,req.body.difficulty], type: db.sequelize.QueryTypes.SELECT }).then(function(result){
-            //console.log("working", result);
+        db.sequelize.query("select * from boardGames as b inner join categories as c on b.category_id = c.id inner join ages as a on b.age_id = a.id where c.name = ? and age_range = ? and difficulty = ? and "+req.body.numPlayers+ " between minPlayer and maxPlayer and timeToPlay = ?", { replacements: [req.body.category ,req.body.age ,req.body.difficulty, req.body.timeToPlay], type: db.sequelize.QueryTypes.SELECT }).then(function(result){
+            console.log("working", result);
 
             res.json(result);
         // db.boardGames.findAll({

@@ -11,6 +11,10 @@ $(document).ready(function() {
     });
 
     function renderGames(data){
+       // $('.game-area').html('');
+      // $(".game-area").remove();
+      $(".game-area").children().text("");
+
         console.log("data", data);
         // var chosenGame = $("<div>");
          var chosenGame = $("<table/>");
@@ -57,6 +61,8 @@ $(document).ready(function() {
     }
 
     function renderGamesIndividual(data){
+        $(".game-area").children().text("");
+
         console.log("data", data);
         // var chosenGame = $("<div>");
          var chosenGame = $("<table/>");
@@ -114,7 +120,7 @@ $(document).ready(function() {
         console.log("difficulty id is ",difficultyid);
         $.post("/api/boardGames/difficulty/"+difficultyid,function(data){
             console.log ("only difficulty id data",data);
-            renderGamesIndividual(data);
+            renderGames(data);
         })
     });
 
@@ -129,10 +135,21 @@ $(document).ready(function() {
         })
     });
 
+    $('#time-play').change(function(){ 
+        console.log( "the single search time-play is selected");
+        //only age search result will show
+        var timePlayid=$("#time-play").val().trim();
+        console.log("time-play id is ",timePlayid);
+        $.post("/api/boardGames/timePlay/"+timePlayid,function(data){
+            console.log ("only time-play id data",data);
+            renderGames(data);
+        })
+    });
+
 
 
     $("#submit-btn").on("click", function(event) {
-        event.preventDefault();
+       // event.preventDefault();
          console.log("clicked");
 
         var newGameSearch = {
@@ -145,6 +162,8 @@ $(document).ready(function() {
          console.log(newGameSearch);
 
         $.post("/api/new", newGameSearch).then(function(data) {
+            console.log("my new url",data);
+            // $('.game-area').empty();
             renderGames(data);
         });
 
