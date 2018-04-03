@@ -90,6 +90,9 @@ $(document).ready(function() {
          }
     }
 
+    function pageFunction(data){
+        
+    }
     $('#category').change(function(){ 
         console.log( "this is selected");
         //only category search result will show
@@ -97,7 +100,15 @@ $(document).ready(function() {
         console.log("category id is ",categoryid);
         $.post("/api/boardGames/category/"+categoryid,function(data){
             console.log ("only category id data",data);
-            renderGamesIndividual(data);
+            var gamesArray=[];
+            var nameArray =[];
+           for ( var i=0; i< data.length;i++){
+               if (nameArray.indexOf(data[i].gameName)==-1){
+                nameArray.push(data[i].gameName);
+                gamesArray.push(data[i]);
+               }
+           }
+            renderGamesIndividual(gamesArray);
         
         })
     });
@@ -109,7 +120,15 @@ $(document).ready(function() {
         console.log("age id is ",ageid);
         $.post("/api/boardGames/age/"+ageid,function(data){
             console.log ("only age id data",data);
-            renderGamesIndividual(data);
+            var gamesArray=[];
+            var nameArray =[];
+           for ( var i=0; i< data.length;i++){
+               if (nameArray.indexOf(data[i].gameName)==-1){
+                nameArray.push(data[i].gameName);
+                gamesArray.push(data[i]);
+               }
+           }
+            renderGamesIndividual(gamesArray);
         })
     });
 
@@ -120,7 +139,15 @@ $(document).ready(function() {
         console.log("difficulty id is ",difficultyid);
         $.post("/api/boardGames/difficulty/"+difficultyid,function(data){
             console.log ("only difficulty id data",data);
-            renderGames(data);
+            var gamesArray=[];
+            var nameArray =[];
+           for ( var i=0; i< data.length;i++){
+               if (nameArray.indexOf(data[i].gameName)==-1){
+                nameArray.push(data[i].gameName);
+                gamesArray.push(data[i]);
+               }
+           }
+            renderGames(gamesArray);
         })
     });
 
@@ -131,7 +158,15 @@ $(document).ready(function() {
         console.log("num-players id is ",numPlayersid);
         $.post("/api/boardGames/numPlayers/"+numPlayersid,function(data){
             console.log ("only num-players id data",data);
-            renderGames(data);
+            var gamesArray=[];
+            var nameArray =[];
+           for ( var i=0; i< data.length;i++){
+               if (nameArray.indexOf(data[i].gameName)==-1){
+                nameArray.push(data[i].gameName);
+                gamesArray.push(data[i]);
+               }
+           }
+            renderGames(gamesArray);
         })
     });
 
@@ -142,7 +177,15 @@ $(document).ready(function() {
         console.log("time-play id is ",timePlayid);
         $.post("/api/boardGames/timePlay/"+timePlayid,function(data){
             console.log ("only time-play id data",data);
-            renderGames(data);
+            var gamesArray=[];
+            var nameArray =[];
+           for ( var i=0; i< data.length;i++){
+               if (nameArray.indexOf(data[i].gameName)==-1){
+                nameArray.push(data[i].gameName);
+                gamesArray.push(data[i]);
+               }
+           }
+            renderGames(gamesArray);
         })
     });
 
@@ -164,7 +207,15 @@ $(document).ready(function() {
         $.post("/api/new", newGameSearch).then(function(data) {
             console.log("my new url",data);
             // $('.game-area').empty();
-            renderGames(data);
+            var gamesArray=[];
+            var nameArray =[];
+           for ( var i=0; i< data.length;i++){
+               if (nameArray.indexOf(data[i].gameName)==-1){
+                nameArray.push(data[i].gameName);
+                gamesArray.push(data[i]);
+               }
+           }
+            renderGames(gamesArray);
         });
 
 
