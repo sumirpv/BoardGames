@@ -144,17 +144,14 @@ h4 {
     display: inline;
 }
 
-<<<<<<< HEAD
 #submit-btn {
     display: block;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 img {
     width: 200px;
     height: 200px;
 }
-=======
->>>>>>> cd98f3a8d29276df2afdd134e06422bc78824d78
 .footer {
     font-family: 'Black Ops One';
     font-size: 20px;

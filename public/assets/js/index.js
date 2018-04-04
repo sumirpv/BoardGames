@@ -20,7 +20,7 @@ $(document).ready(function() {
        //var chosenGame = $("<table/>");
       // chosenGame.addClass("caption");
       //  chosenGame.append("Games matching your search: <br><br>");
-      chosenGame.append("<div class='row'>"+"</div>");
+      chosenGame.append("<div class='row display-flex'>"+"</div>");
      
        console.log("Returned from server:");
 
