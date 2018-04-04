@@ -31,12 +31,12 @@ $(document).ready(function() {
 
 
         var nameInput = $("#game-name").val().trim();
-        var categoryInput = $("#category").val();
-        var ageGroup = $("#age").val();
-        var difficultyLevel = $("#difficulty").val();
+        var categoryInput = $("#add-game-category").val();
+        var ageGroup = $("#add-game-age").val();
+        var difficultyLevel = $("#add-game-difficulty").val();
         var minimumPlayer = $("#min-player").val().trim();
         var maximumPlayer = $("#max-player").val().trim();
-        var gameTime = $("#time-play").val();
+        var gameTime = $("#add-game-time-play").val();
         var manufacturerName = $("#manufacturer").val().trim();
         var releaseYear = $("#year").val().trim();
         var imageUrl = $("#img-url").val().trim();
