@@ -7,7 +7,7 @@ $(document).ready(function() {
         $("#difficulty").val(""),
         $("#num-players").val(""),
         $("#time-play").val(""),
-        $(".game-area").remove();
+        $(".game-area").children().text("");
     });
 
     function renderGames(data){
@@ -15,7 +15,10 @@ $(document).ready(function() {
       // $(".game-area").remove();
       $(".game-area").children().text("");
 
-      console.log("data", data);
+      if (data.length < 1){
+          alert("There is no games in your search parameters");
+      }
+      else {
       var chosenGame = $("<div>");
        //var chosenGame = $("<table/>");
       // chosenGame.addClass("caption");
@@ -38,28 +41,18 @@ $(document).ready(function() {
           "<div>" +"Manufacturer: "+ data[i].manufacturer + "</div>"+
           "<div>" +"Year: "+data[i].year+ "</div></div></div></div>");
 
-           
-          //  chosenGame.append("<tr><td>"+"Game Name: " + data[i].gameName + "</td></tr>");
-          //  chosenGame.append("<tr><td>"+"Category: " + data[i].category.name + "</td></tr>");
-          //  chosenGame.append("<tr><td>"+"Suggested Age Range:" + data[i].age.age_range + "</td></tr>");
-          //  chosenGame.append("<tr><td>"+"Difficulty Level: " + data[i].difficulty + "</td></tr>");
-          //  chosenGame.append("<tr><td>"+"Minimum Players: " + data[i].minPlayer + "</td></tr>");
-          //  chosenGame.append("<tr><td>"+"Maximum Players: " + data[i].maxPlayer + "</td></tr>");
-          //  chosenGame.append("<tr><td>"+"Average Time Needed to Play: " + data[i].timeToPlay + "</td></tr>");
-          //  chosenGame.append("<tr><td>"+"Manufacturer: "+ data[i].manufacturer+"</td></tr>");
-          //  chosenGame.append("<tr><td>"+"Year: "+ data[i].year+"</td></tr>");
-          //  chosenGame.append("<tr><td><img src='"+ data[i].img+"'/></td></tr>");
-          //  chosenGame.append("<tr><td>"+"<br>"+"</tr></td>");
-
            $(".game-area").append(chosenGame);
        }
+    }
     }
 
     function renderGamesIndividual(data){
         $(".game-area").children().text("");
 
-        console.log("data", data);
-        var chosenGame = $("<div>");
+        if (data.length < 1){
+            alert("There is no games in your search parameters");
+        }
+        else {        var chosenGame = $("<div>");
          //var chosenGame = $("<table/>");
         // chosenGame.addClass("caption");
         //  chosenGame.append("Games matching your search: <br><br>");
@@ -81,21 +74,9 @@ $(document).ready(function() {
             "<div>" +"Manufacturer: "+ data[i].manufacturer + "</div>"+
             "<div>" +"Year: "+data[i].year+ "</div></div></div></div>");
 
-             
-            //  chosenGame.append("<tr><td>"+"Game Name: " + data[i].gameName + "</td></tr>");
-            //  chosenGame.append("<tr><td>"+"Category: " + data[i].category.name + "</td></tr>");
-            //  chosenGame.append("<tr><td>"+"Suggested Age Range:" + data[i].age.age_range + "</td></tr>");
-            //  chosenGame.append("<tr><td>"+"Difficulty Level: " + data[i].difficulty + "</td></tr>");
-            //  chosenGame.append("<tr><td>"+"Minimum Players: " + data[i].minPlayer + "</td></tr>");
-            //  chosenGame.append("<tr><td>"+"Maximum Players: " + data[i].maxPlayer + "</td></tr>");
-            //  chosenGame.append("<tr><td>"+"Average Time Needed to Play: " + data[i].timeToPlay + "</td></tr>");
-            //  chosenGame.append("<tr><td>"+"Manufacturer: "+ data[i].manufacturer+"</td></tr>");
-            //  chosenGame.append("<tr><td>"+"Year: "+ data[i].year+"</td></tr>");
-            //  chosenGame.append("<tr><td><img src='"+ data[i].img+"'/></td></tr>");
-            //  chosenGame.append("<tr><td>"+"<br>"+"</tr></td>");
-
              $(".game-area").append(chosenGame);
          }
+        }
     }
 
     function pageFunction(data){
