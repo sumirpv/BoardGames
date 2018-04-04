@@ -38,21 +38,25 @@ $(document).ready(function() {
         chosenGame.append("<div class='row display-flex'>"+"</div>");
         chosenGame.append("<h2>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
      
-        console.log("Returned from server:");
+       console.log("Returned from server:");
 
-        for (var i = 0; i < data.length; i++) {
-            chosenGame.append("<div class='col-xs-4 col-md-4 text-center'>"+"<div class='thumbnail'>" +
-            "<img src='" +data[i].img + "' />" +
-            "<div class='caption'>"+
-            "<div>" +"Game Name:  "+data[i].gameName + "</div>"+
-            "<div>" +"Category: " + data[i].name+"</div>"+
-            "<div>" +"Suggested Age Range:" + data[i].age_range+"</div>"+
-            "<div>" +"Difficulty Level: "+ data[i].difficulty + "</div>"+
-            "<div>" +"Minimum Players: "+ data[i].minPlayer +"</div>"+
-            "<div>" +"Maximum Players: "+ data[i].maxPlayer +"</div>"+
-            "<div>" +"Average Time Needed to Play: "+ data[i].timeToPlay +"</div>"+
-            "<div>" +"Manufacturer: "+ data[i].manufacturer + "</div>"+
-            "<div>" +"Year: "+data[i].year+ "</div></div></div></div>");
+       for (var i = 0; i < data.length; i++) {
+          chosenGame.append("<div class='col-xs-4 col-md-4 text-center'>"+"<div class='thumbnail'>" +
+          "<img src='" +data[i].img + "' />" +
+          "<div class='caption'>"+
+          "<div>" +"Game Name:  "+data[i].gameName + "</div>"+
+          "<div>" +"Category: " + data[i].name+"</div>"+
+          "<div>" +"Suggested Age Range:" + data[i].age_range+"</div>"+
+          "<div>" +"Difficulty Level: "+ data[i].difficulty + "</div>"+
+          "<div>" +"Minimum Players: "+ data[i].minPlayer +"</div>"+
+          "<div>" +"Maximum Players: "+ data[i].maxPlayer +"</div>"+
+          "<div>" +"Average Time Needed to Play: "+ data[i].timeToPlay +"</div>"+
+          "<div>" +"Manufacturer: "+ data[i].manufacturer + "</div>"+
+          "<div>" +"Year: "+data[i].year+ "</div>"+
+          "<div>"+"Ratings: "+
+          "<button type='button' class='btn btn-default'>"+
+         "<span class='glyphicon glyphicon-star' aria-hidden='true'></span>"+"</button>"+"</div>"+
+          "</div></div></div>");
 
            $(".game-area").append(chosenGame);
        }
