@@ -27,7 +27,8 @@ $(document).ready(function() {
                }
             }
             renderGamesIndividual(gamesArray, "GAME NAME", nameToSearch);
-    })
+        })
+    });
 
     // function renderGames(data){
     //    // $('.game-area').html('');
@@ -273,4 +274,4 @@ $(document).ready(function() {
 
     
 });
-});
+// });
