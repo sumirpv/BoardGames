@@ -6,8 +6,7 @@ $(document).ready(function() {
 
 
 
-    // IS THIS COMMENTED INFO BELOW NEEDED?
-    ////////////////////////////////////////////////////////////////////////////////////////////
+
     // var url = window.location.search;
     // var postId;
     // var authorId;
@@ -24,7 +23,7 @@ $(document).ready(function() {
     // else if (url.indexOf("?author_id=") !== -1) {
     //     authorId = url.split("=")[1];
     // }
-    ////////////////////////////////////////////////////////////////////////////////////////////
+  
 
     // Function for handling what happens when the form to create a new post is submitted
     function handleFormSubmit(event) {
