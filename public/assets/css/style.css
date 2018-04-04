@@ -5,6 +5,11 @@ body {
     background-size: cover;
 }
 
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .heading {
     background-image: url("../img/jungle.jpg");
     background-position: 50% 50%;
@@ -25,10 +30,6 @@ body {
     position: relative;
 }
 
-/* .heading-title:hover {
-    color:#990099;
-} */
-
 .heading-subtitle {
     font-family: 'Aldrich', sans-serif;
     -webkit-text-stroke: 1px black;
@@ -38,6 +39,11 @@ body {
     text-transform: uppercase;
     color: #f7eb75;
     text-shadow: -4px 3px 2px #e83426;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .rope-border-top {
@@ -58,23 +64,16 @@ body {
     margin-bottom: -30px;
 }
 
-.rope-border-footer {
-    background-image: url("../img/rope2.png");
-    background-repeat: repeat-x;
-    height: 50px;
-    width: 100%;
-    z-index: 100;
-    margin-bottom: -38px;
-    margin-top:0;
-}
-
 .dropdown-container {
     background-image: url("../img/wood2.jpg");
-    height: 250px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 54%;
+}
+
+.dropdown-ul {
+    width: 121%;
 }
 
 .dropdown-title {
@@ -83,6 +82,10 @@ body {
     text-transform: uppercase;
     color: black;
     text-shadow: 1px 1px 4px rgb(104, 79, 72);
+}
+
+.first-dropdown {
+    margin-left: 49px;
 }
 
 .chosen-select {
@@ -247,10 +250,12 @@ h4 {
     display: block;
     /* margin: 0 auto; */
 }
+
 img {
     width: 200px;
     height: 200px;
 }
+
 .footer {
     font-family: 'Black Ops One';
     font-size: 20px;
@@ -269,16 +274,20 @@ img {
     border-top: 1px solid grey;
     width: 100%;
     z-index: 90;
-    position: relative;
 }
 
-.inner-footer {
-    bottom: 0;
-} 
+.rope-border-footer {
+    background-image: url("../img/rope2.png");
+    background-repeat: repeat-x;
+    height: 50px;
+    width: 100%;
+    z-index: 100;
+    margin-bottom: -18px;
+    margin-top: -22px;
+}
 
-
-
-
-.submit-row {
-    margin-top: 100px;
+@media (min-width: 1200px) {
+    .col-lg-2 {
+        width: 14.666667%;
+    }
 }
