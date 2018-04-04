@@ -95,8 +95,8 @@ VALUES ("Battleship", 1, 2, "Simple", 2, 4, "20 - 29", "Hasbro", 1930, "https://
 
 INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
 VALUES ("Battleship", 2, 2, "Simple", 2, 4, "20 - 29", "Hasbro", 1930, "https://ravereviews.org/wp-content/uploads/2017/06/Battleship.jpg");
-INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
 
+INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
 VALUES ("Battleship", 13, 2, "Simple", 2, 4, "20 - 29", "Hasbro", 1930, "https://ravereviews.org/wp-content/uploads/2017/06/Battleship.jpg");
 
 INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
