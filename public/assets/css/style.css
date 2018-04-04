@@ -88,6 +88,9 @@ body {
 .chosen-select {
     width: 200px;
 }
+.thumbnail {
+    height: 450px;
+  }
 
 #submit-btn {
     width: 150px;

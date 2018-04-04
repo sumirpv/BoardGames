@@ -130,13 +130,13 @@ VALUES ("Candy Land", 2, 1, "Simple", 2, 4, "30 - 59", "Hasbro", 1949,  "https:/
 
 
 INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
-VALUES ("Cards Against Humanity", 4, 4, "Simple", 4, 20, "30 - 59", "Cards Against Humanity LLC", 2011, "https://images-na.ssl-images-amazon.com/images/I/71LpuvHDRLL._SY550_.jpg");
+VALUES ("Cards Against Humanity", 4, 4, "Simple", 4, 20, "30 - 59", "Cards Against Humanity LLC", 2011, "https://images-na.ssl-images-amazon.com/images/I/41mECnRToeL._SL500_AC_SS350_.jpg");
 
 INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
-VALUES ("Cards Against Humanity", 5, 4, "Simple", 4, 20, "30 - 59", "Cards Against Humanity LLC", 2011, "https://images-na.ssl-images-amazon.com/images/I/71LpuvHDRLL._SY550_.jpg");
+VALUES ("Cards Against Humanity", 5, 4, "Simple", 4, 20, "30 - 59", "Cards Against Humanity LLC", 2011, "https://images-na.ssl-images-amazon.com/images/I/41mECnRToeL._SL500_AC_SS350_.jpg");
 
 INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
-VALUES ("Cards Against Humanity", 11, 4, "Simple", 4, 20, "30 - 59", "Cards Against Humanity LLC", 2011, "https://images-na.ssl-images-amazon.com/images/I/71LpuvHDRLL._SY550_.jpg");
+VALUES ("Cards Against Humanity", 11, 4, "Simple", 4, 20, "30 - 59", "Cards Against Humanity LLC", 2011, "https://images-na.ssl-images-amazon.com/images/I/41mECnRToeL._SL500_AC_SS350_.jpg");
 
 
 INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
