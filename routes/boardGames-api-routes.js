@@ -19,6 +19,14 @@ module.exports = function(app) {
     // GET route for retrieving a single game
     app.get("/api/boardGames/:gameName", function(req, res) {
         db.boardGames.findAll({
+            include : [
+                {
+                    model : db.category
+                },
+                {
+                    model : db.age
+                }
+            ],
             where : {
                 gameName : req.params.gameName
             },
