@@ -15,76 +15,84 @@ $(document).ready(function() {
       // $(".game-area").remove();
       $(".game-area").children().text("");
 
-        console.log("data", data);
-        // var chosenGame = $("<div>");
-         var chosenGame = $("<table/>");
+      console.log("data", data);
+      var chosenGame = $("<div>");
+       //var chosenGame = $("<table/>");
+      // chosenGame.addClass("caption");
+      //  chosenGame.append("Games matching your search: <br><br>");
+      chosenGame.append("<div class='row'>"+"</div>");
+     
+       console.log("Returned from server:");
 
-         chosenGame.addClass("chosenGame");
-         chosenGame.append("Games matching your search: <br><br>");
-         // chosenGame.append(data[0].gameName);
+       for (var i = 0; i < data.length; i++) {
+          chosenGame.append("<div class='col-xs-4 col-md-4 text-center'>"+"<div class='thumbnail'>" +
+          "<img src='" +data[i].img + "' />" +
+          "<div class='caption'>"+
+          "<div>" +"Game Name:  "+data[i].gameName + "</div>"+
+          "<div>" +"Category: " + data[i].name+"</div>"+
+          "<div>" +"Suggested Age Range:" + data[i].age_range+"</div>"+
+          "<div>" +"Difficulty Level: "+ data[i].difficulty + "</div>"+
+          "<div>" +"Minimum Players: "+ data[i].minPlayer +"</div>"+
+          "<div>" +"Maximum Players: "+ data[i].maxPlayer +"</div>"+
+          "<div>" +"Average Time Needed to Play: "+ data[i].timeToPlay +"</div>"+
+          "<div>" +"Manufacturer: "+ data[i].manufacturer + "</div>"+
+          "<div>" +"Year: "+data[i].year+ "</div></div></div></div>");
 
-         console.log("Returned from server:");
+           
+          //  chosenGame.append("<tr><td>"+"Game Name: " + data[i].gameName + "</td></tr>");
+          //  chosenGame.append("<tr><td>"+"Category: " + data[i].category.name + "</td></tr>");
+          //  chosenGame.append("<tr><td>"+"Suggested Age Range:" + data[i].age.age_range + "</td></tr>");
+          //  chosenGame.append("<tr><td>"+"Difficulty Level: " + data[i].difficulty + "</td></tr>");
+          //  chosenGame.append("<tr><td>"+"Minimum Players: " + data[i].minPlayer + "</td></tr>");
+          //  chosenGame.append("<tr><td>"+"Maximum Players: " + data[i].maxPlayer + "</td></tr>");
+          //  chosenGame.append("<tr><td>"+"Average Time Needed to Play: " + data[i].timeToPlay + "</td></tr>");
+          //  chosenGame.append("<tr><td>"+"Manufacturer: "+ data[i].manufacturer+"</td></tr>");
+          //  chosenGame.append("<tr><td>"+"Year: "+ data[i].year+"</td></tr>");
+          //  chosenGame.append("<tr><td><img src='"+ data[i].img+"'/></td></tr>");
+          //  chosenGame.append("<tr><td>"+"<br>"+"</tr></td>");
 
-         for (var i = 0; i < data.length; i++) {
-             console.log("ID: " + data[i].id);
-             console.log("Game Name: " + data[i].gameName);
-             console.log("Category: " + data[i].category_id);
-             console.log("Suggested Age Range: " + data[i].age_id);
-             console.log("Minimum Players Needed: " + data[i].minPlayer);
-             console.log("Maximum Players Needed: " + data[i].maxPlayer);
-             console.log("Average Time Needed to Play: " + data[i].timeToPlay);
-             console.log("Manufacturer: "+ data[i].manufacturer);
-             console.log("Year: "+ data[i].year);
-             console.log("image: "+ data[i].img);
-             // chosenGame.append("Game Name: " + data[i].gameName + "<br>");
-             // chosenGame.append("Suggested Minimum Age??" + data[i].age_id + "<br>");
-             // chosenGame.append("Minimum Players: " + data[i].minPlayer + "<br>");
-             // chosenGame.append("Maximum Players: " + data[i].maxPlayer + "<br>");
-             // chosenGame.append("Average Time Needed to Play: " + data[i].timeToPlay + "<br>");
-             // chosenGame.append("Manufacturer: "+data[i].manufacturer+"<br>");
-             // chosenGame.append("Year: "+data[i].year+"<br>");
-             // chosenGame.append("image: "+data[i].img+"<br><br><br>");
-             chosenGame.append("<tr><td>"+"Game Name: " + data[i].gameName + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Category: " + data[i].name + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Suggested Age Range:" + data[i].age_range + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Difficulty Level: " + data[i].difficulty + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Minimum Players: " + data[i].minPlayer + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Maximum Players: " + data[i].maxPlayer + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Average Time Needed to Play: " + data[i].timeToPlay + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Manufacturer: "+ data[i].manufacturer+"</td></tr>");
-             chosenGame.append("<tr><td>"+"Year: "+ data[i].year+"</td></tr>");
-             chosenGame.append("<tr><td><img src='"+ data[i].img+"'/></td></tr>");
-             chosenGame.append("<tr><td>"+"<br>"+"</tr></td>");
-
-             $(".game-area").append(chosenGame);
-         }
+           $(".game-area").append(chosenGame);
+       }
     }
 
     function renderGamesIndividual(data){
         $(".game-area").children().text("");
 
         console.log("data", data);
-        // var chosenGame = $("<div>");
-         var chosenGame = $("<table/>");
-
-         chosenGame.addClass("chosenGame");
-         chosenGame.append("Games matching your search: <br><br>");
-         // chosenGame.append(data[0].gameName);
-
+        var chosenGame = $("<div>");
+         //var chosenGame = $("<table/>");
+        // chosenGame.addClass("caption");
+        //  chosenGame.append("Games matching your search: <br><br>");
+        chosenGame.append("<div class='row'>"+"</div>");
+       
          console.log("Returned from server:");
 
          for (var i = 0; i < data.length; i++) {
-             chosenGame.append("<tr><td>"+"Game Name: " + data[i].gameName + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Category: " + data[i].category.name + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Suggested Age Range:" + data[i].age.age_range + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Difficulty Level: " + data[i].difficulty + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Minimum Players: " + data[i].minPlayer + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Maximum Players: " + data[i].maxPlayer + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Average Time Needed to Play: " + data[i].timeToPlay + "</td></tr>");
-             chosenGame.append("<tr><td>"+"Manufacturer: "+ data[i].manufacturer+"</td></tr>");
-             chosenGame.append("<tr><td>"+"Year: "+ data[i].year+"</td></tr>");
-             chosenGame.append("<tr><td><img src='"+ data[i].img+"'/></td></tr>");
-             chosenGame.append("<tr><td>"+"<br>"+"</tr></td>");
+            chosenGame.append("<div class='col-xs-4 col-md-4 text-center'>"+"<div class='thumbnail'>" +
+            "<img src='" +data[i].img + "' />" +
+            "<div class='caption'>"+
+            "<div>" +"Game Name:  "+data[i].gameName + "</div>"+
+            "<div>" +"Category: " + data[i].category.name+"</div>"+
+            "<div>" +"Suggested Age Range:" + data[i].age.age_range+"</div>"+
+            "<div>" +"Difficulty Level: "+ data[i].difficulty + "</div>"+
+            "<div>" +"Minimum Players: "+ data[i].minPlayer +"</div>"+
+            "<div>" +"Maximum Players: "+ data[i].maxPlayer +"</div>"+
+            "<div>" +"Average Time Needed to Play: "+ data[i].timeToPlay +"</div>"+
+            "<div>" +"Manufacturer: "+ data[i].manufacturer + "</div>"+
+            "<div>" +"Year: "+data[i].year+ "</div></div></div></div>");
+
+             
+            //  chosenGame.append("<tr><td>"+"Game Name: " + data[i].gameName + "</td></tr>");
+            //  chosenGame.append("<tr><td>"+"Category: " + data[i].category.name + "</td></tr>");
+            //  chosenGame.append("<tr><td>"+"Suggested Age Range:" + data[i].age.age_range + "</td></tr>");
+            //  chosenGame.append("<tr><td>"+"Difficulty Level: " + data[i].difficulty + "</td></tr>");
+            //  chosenGame.append("<tr><td>"+"Minimum Players: " + data[i].minPlayer + "</td></tr>");
+            //  chosenGame.append("<tr><td>"+"Maximum Players: " + data[i].maxPlayer + "</td></tr>");
+            //  chosenGame.append("<tr><td>"+"Average Time Needed to Play: " + data[i].timeToPlay + "</td></tr>");
+            //  chosenGame.append("<tr><td>"+"Manufacturer: "+ data[i].manufacturer+"</td></tr>");
+            //  chosenGame.append("<tr><td>"+"Year: "+ data[i].year+"</td></tr>");
+            //  chosenGame.append("<tr><td><img src='"+ data[i].img+"'/></td></tr>");
+            //  chosenGame.append("<tr><td>"+"<br>"+"</tr></td>");
 
              $(".game-area").append(chosenGame);
          }
