@@ -8,7 +8,26 @@ $(document).ready(function() {
         $("#num-players").val(""),
         $("#time-play").val(""),
         $(".game-area").children().text("");
+        $("#game-name").val();
     });
+
+    // Search DB by Game Name
+    $("#submit-name-btn").on("click", function(event) {
+        event.preventDefault();
+        // console.log("clicked");
+        var nameToSearch = $("#game-name").val().trim();
+        console.log(nameToSearch);
+        $.get("/api/boardGames/" + nameToSearch, function(data) {
+            var gamesArray=[];
+            var nameArray =[];
+            for ( var i=0; i< data.length;i++){
+               if (nameArray.indexOf(data[i].gameName)==-1){
+                nameArray.push(data[i].gameName);
+                gamesArray.push(data[i]);
+               }
+            }
+            renderGamesIndividual(gamesArray, "GAME NAME", nameToSearch);
+    })
 
     // function renderGames(data){
     //    // $('.game-area').html('');
@@ -187,12 +206,12 @@ $(document).ready(function() {
             console.log ("only num-players id data",data);
             var gamesArray=[];
             var nameArray =[];
-           for ( var i=0; i< data.length;i++){
+            for ( var i=0; i< data.length;i++){
                if (nameArray.indexOf(data[i].gameName)==-1){
                 nameArray.push(data[i].gameName);
                 gamesArray.push(data[i]);
                }
-           }
+            }
             renderGames(gamesArray, "NUMBER OF PLAYERS", numPlayersid);
         })
     });
@@ -253,4 +272,5 @@ $(document).ready(function() {
     });
 
     
+});
 });
