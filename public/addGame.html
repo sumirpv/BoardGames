@@ -35,7 +35,7 @@
         <div class="row">
             <!-- Column 1 -->
             <div class="col-lg-6">
-                <form>
+                <form id="create-game">
                     <div class="form-group">
                         <label for="game-name">Name of Game</label>
                         <input type="text" class="form-control" id="game-name" placeholder="Name">
@@ -44,23 +44,23 @@
                         <h4>Category</h4>
                         <select data-placeholder="" class="chosen-select" name="category" id="category">
                             <option class="drop-down choose" value="" selected disabled>Choose</option>
-                            <option class="drop-down" value="Adults">Adults</option>
-                            <option class="drop-down" value="Card Game">Card Game</option>
-                            <option class="drop-down" value="Dexterity">Dexterity</option>
-                            <option class="drop-down" value="Dice">Dice</option>
-                            <option class="drop-down" value="Drawing">Drawing</option>
-                            <option class="drop-down" value="Educational">Educational</option>
-                            <option class="drop-down" value="Family">Family</option>
-                            <option class="drop-down" value="Humor">Humor</option>
-                            <option class="drop-down" value="Kids">Kids</option>
-                            <option class="drop-down" value="Math">Math</option>
-                            <option class="drop-down" value="Memory Game">Memory Game</option>
-                            <option class="drop-down" value="Military">Military</option>
-                            <option class="drop-down" value="Miniatures">Miniatures</option>
-                            <option class="drop-down" value="Party">Party</option>
-                            <option class="drop-down" value="Puzzle">Puzzle</option>                 
-                            <option class="drop-down" value="Strategy">Strategy</option>
-                            <option class="drop-down" value="Word Game">Word Game</option>
+                            <option class="drop-down" value="3">Adults</option>
+                            <option class="drop-down" value="5">Card Game</option>
+                            <option class="drop-down" value="10">Dexterity</option>
+                            <option class="drop-down" value="6">Dice</option>
+                            <option class="drop-down" value="17">Drawing</option>
+                            <option class="drop-down" value="7">Educational</option>
+                            <option class="drop-down" value="1">Family</option>
+                            <option class="drop-down" value="11">Humor</option>
+                            <option class="drop-down" value="2">Kids</option>
+                            <option class="drop-down" value="12">Math</option>
+                            <option class="drop-down" value="8">Memory Game</option>
+                            <option class="drop-down" value="13">Military</option>
+                            <option class="drop-down" value="16">Miniatures</option>
+                            <option class="drop-down" value="4">Party</option>
+                            <option class="drop-down" value="15">Puzzle</option>                 
+                            <option class="drop-down" value="14">Strategy</option>
+                            <option class="drop-down" value="9">Word Game</option>
                         </select>
                     </div>
                     <br>
@@ -68,10 +68,10 @@
                         <h4>Age Group</h4>
                         <select data-placeholder="" class="chosen-select" name="age" id="age">
                             <option class="drop-down choose" value="" selected disabled>Choose</option>
-                            <option class="drop-down" value="Less than 8 years old">Less than 8 years old</option>
-                            <option class="drop-down" value="8 - 13 years old">8 - 13 years old</option>
-                            <option class="drop-down" value="13 Years and Up">13 Years and Up</option>
-                            <option class="drop-down" value="Adult Games Only">Adult Games Only</option>
+                            <option class="drop-down" value="1">Less than 8 years old</option>
+                            <option class="drop-down" value="2">8 - 13 years old</option>
+                            <option class="drop-down" value="3">13 Years and Up</option>
+                            <option class="drop-down" value="4">Adult Games Only</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -132,6 +132,9 @@
     </footer>
         
     <script src="assets/js/index.js" type="text/javascript">
+    </script>
+
+    <script src="assets/js/addGame.js" type="text/javascript">
     </script>
         
 </body>
