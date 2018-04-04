@@ -17,7 +17,7 @@ $(document).ready(function() {
         // console.log("clicked");
         var nameToSearch = $("#game-name").val().trim();
         console.log(nameToSearch);
-        $.get("/api/boardGames/" + nameToSearch, function(data) {
+        $.post("/api/boardGames/" + nameToSearch, function(data) {
             var gamesArray=[];
             var nameArray =[];
             for ( var i=0; i< data.length;i++){

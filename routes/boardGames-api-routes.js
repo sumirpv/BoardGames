@@ -17,7 +17,8 @@ module.exports = function(app) {
     });
 
     // GET route for retrieving a single game
-    app.get("/api/boardGames/:gameName", function(req, res) {
+    app.post("/api/boardGames/:gameName", function(req, res) {
+        console.log("gameName parameter", req.params.gameName);
         db.boardGames.findAll({
             include : [
                 {
