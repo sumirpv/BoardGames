@@ -215,6 +215,7 @@ $(document).ready(function() {
         $.post("/api/new", newGameSearch).then(function(data) {
             console.log("my new url",data);
             // $('.game-area').empty();
+            //if(indexOf(data) > -1 )
             var gamesArray=[];
             var nameArray =[];
            for ( var i=0; i< data.length;i++){
