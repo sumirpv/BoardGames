@@ -230,7 +230,6 @@ INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, ma
 VALUES ("Star Trek: The Next Generation 1000 Piece Puzzle", 15, 3, "Intermediate", 1, 8, "120 +", "Aquarius", 2016, "https://cdn.shopify.com/s/files/1/1911/5793/products/star-trek-puzzle-1000-pieces_1024x1024.jpg?v=1505674522");
 
 
-
 INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
 VALUES ("Stratego", 8, 2, "Intermediate", 2, 2, "30 - 59", "Play Monster", 1946, "https://cdn.shopify.com/s/files/1/1911/5793/products/91-lMnF59iL._SY500_1024x1024.jpg?v=1509129438");
 
