@@ -10,26 +10,29 @@ $(document).ready(function() {
         $(".game-area").children().text("");
     });
 
-    function renderGames(data){
-       // $('.game-area').html('');
-      // $(".game-area").remove();
-      $(".game-area").children().text("");
+    // function renderGames(data){
+    //    // $('.game-area').html('');
+    //   // $(".game-area").remove();
+    //   $(".game-area").children().text("");
 
-      if (data.length < 1){
-          alert("There is no games in your search parameters");
-      }
-      else {
-      var chosenGame = $("<div>");
-       //var chosenGame = $("<table/>");
-      // chosenGame.addClass("caption");
-      //  chosenGame.append("Games matching your search: <br><br>");
-      chosenGame.append("<div class='row display-flex'>"+"</div>");
-    // Function that renders games using the boardGames model
+    //   if (data.length < 1){
+    //       alert("There is no games in your search parameters");
+    //   }
+    //   else {
+    //   var chosenGame = $("<div>");
+    //    //var chosenGame = $("<table/>");
+    //   // chosenGame.addClass("caption");
+    //   //  chosenGame.append("Games matching your search: <br><br>");
+    //   chosenGame.append("<div class='row display-flex'>"+"</div>");
+    // // Function that renders games using the boardGames model
     function renderGames(data, filterCategory, selectedFilter){
         // $('.game-area').html('');
         // $(".game-area").remove();
         $(".game-area").children().text("");
-
+      if (data.length < 1){
+          alert("There is no games in your search parameters");
+      }
+      else {
         console.log("data", data);
         var chosenGame = $("<div>");
         //var chosenGame = $("<table/>");
