@@ -56,12 +56,23 @@ $(document).ready(function() {
           "<div>" +"Average Time Needed to Play: "+ data[i].timeToPlay +"</div>"+
           "<div>" +"Manufacturer: "+ data[i].manufacturer + "</div>"+
           "<div>" +"Year: "+data[i].year+ "</div>"+
-          "<div>"+"Ratings: "+
-          "<button type='button' class='btn btn-default'>"+
-         "<span class='glyphicon glyphicon-star' aria-hidden='true'></span>"+"</button>"+"</div>"+
+          "<div class='movie_choice'>"+"Ratings: "+
+          "<div id='r1' class = 'rate_widget'>"+
+        "<div class='star_1 ratings_stars'>"+"</div>"+
+        "<div class='star_2 ratings_stars'>"+"</div>"+
+        "<div class='star_3 ratings_stars'>"+"</div>"+
+        "<div class='star_4 ratings_stars'>"+"</div>"+
+        "<div class='star_5 ratings_stars'>"+"</div>"+
+        "<div class='total_votes'>"+"rate"+"</div>"+"</div>"+"</div>"+
           "</div></div></div>");
 
            $(".game-area").append(chosenGame);
+
+        //    "<button type='button' class='btn btn-default'>"+
+        //    "<span class='glyphicon glyphicon-star' aria-hidden='true'></span>"+"</button>"+"</div>"+
+        
+
+    
        }
     }
     }
