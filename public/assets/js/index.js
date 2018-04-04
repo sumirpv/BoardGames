@@ -39,7 +39,11 @@ $(document).ready(function() {
           "<div>" +"Maximum Players: "+ data[i].maxPlayer +"</div>"+
           "<div>" +"Average Time Needed to Play: "+ data[i].timeToPlay +"</div>"+
           "<div>" +"Manufacturer: "+ data[i].manufacturer + "</div>"+
-          "<div>" +"Year: "+data[i].year+ "</div></div></div></div>");
+          "<div>" +"Year: "+data[i].year+ "</div>"+
+          "<div>"+"Ratings: "+
+          "<button type='button' class='btn btn-default'>"+
+         "<span class='glyphicon glyphicon-star' aria-hidden='true'></span>"+"</button>"+"</div>"+
+          "</div></div></div>");
 
            $(".game-area").append(chosenGame);
        }
