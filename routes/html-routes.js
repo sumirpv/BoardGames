@@ -20,4 +20,8 @@ module.exports = function(app) {
     app.get("/addGame", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/addGame.html"));
     });
+
+    app.get("*", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/home.html"));
+    });
 };

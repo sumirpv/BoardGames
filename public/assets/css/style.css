@@ -232,6 +232,11 @@ body {
     text-shadow: 1px 1px 4px rgb(255, 255, 255);
 }
 
+#home {
+    color: red;
+    text-shadow: 1px 1px 4px rgb(255, 255, 255);
+}
+
 .dropdown-ul {
     list-style-type: none;
     list-style: none;
@@ -290,4 +295,16 @@ img {
     .col-lg-2 {
         width: 14.666667%;
     }
+}
+
+#create-game {
+    font-family: 'Special Elite', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.add-game-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 25px;
+    font-weight: bold;
 }
