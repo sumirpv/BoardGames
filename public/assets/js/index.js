@@ -46,9 +46,7 @@ $(document).ready(function() {
     // Search DB by Game Name
     $("#submit-name-btn").on("click", function(event) {
         event.preventDefault();
-        // console.log("clicked");
         var nameToSearch = $("#game-name").val().trim();
-        // console.log(nameToSearch);
         $.post("/api/boardGames/" + nameToSearch, function(data) {
             var gamesArray = [];
             var nameArray = [];
@@ -63,29 +61,21 @@ $(document).ready(function() {
     });
 
     function renderGames(data, filterCategory, selectedFilter) {
-        // $('.game-area').html('');
-        // $(".game-area").remove();
         $(".game-area").children().text("");
         if (data.length < 1) {
             alert("There is no games in your search parameters");
         }
         else {
-            // console.log("data", data);
             
             var chosenGame = $("<div>");
-            // var chosenGame = $("<table/>");
-            // chosenGame.addClass("caption");
-            //  chosenGame.append("Games matching your search: <br><br>");
             chosenGame.append("<div class='row display-flex'>" + "</div>");
             chosenGame.append("<h2 class='text-center'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
-     
-            // console.log("Returned from server:");
 
             for (var i = 0; i < data.length; i++) {
                 var dynamic="";
                 for (var j =0; j<data[i].rating; j++){  
                     dynamic+="<img src='"+ 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png'+"'/>";
-                    };
+                };
                 chosenGame.append("<div class='col-xs-4 col-md-4 text-justify'>" + "<div class='thumbnail'><br>" +
                 "<img id='thumb-img' src='" + data[i].img + "' /><br>" +
                 "<div class='caption'>" +
@@ -107,27 +97,16 @@ $(document).ready(function() {
         }
     }
 
-    // function display() {
-    //     var x = "yr";
-    //      show_image(x ,8) ;
-    //  }
     function show_image (number) {
         var x = number;
-       //  var y = id;
         for (var i =0; i<x; i++){
             var img = document.createElement("img");
             img.height="30px";
             
             img.src = "http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png";
             $(".game-area").append(img);
-           // document.getElementById(".game-area").appendChild(img);
-
         }
     }
-     
-    //  display();
-    //  show_image("y",9);
-     
 
     // Function that renders games using the boardGames, categories, and age models
     function renderGamesIndividual(data, filterCategory, selectedFilter) {
@@ -139,13 +118,8 @@ $(document).ready(function() {
         else {        
             
             var chosenGame = $("<div>");
-            //var chosenGame = $("<table/>");
-            // chosenGame.addClass("caption");
-            //  chosenGame.append("Games matching your search: <br><br>");
             chosenGame.append("<div class='row'>" + "</div>");
             chosenGame.append("<h2 class='text-center'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
-       
-            // console.log("Returned from server:");
 
             for (var i = 0; i < data.length; i++) {
                 var dynamic="";
@@ -174,12 +148,9 @@ $(document).ready(function() {
 
     // Searches DB based off of the category input ONLY
     $('#category').change(function() { 
-        // console.log( "this is selected");
         // only category search result will show
         var categoryid = $("#category").val().trim();
-        // console.log("category id is ", categoryid);
         $.post("/api/boardGames/category/" + categoryid, function(data) {
-            // console.log ("only category id data", data);
             var gamesArray = [];
             var nameArray = [];
             for ( var i = 0; i < data.length; i++) {
@@ -194,12 +165,9 @@ $(document).ready(function() {
 
     // Searches DB based off of the age input ONLY
     $('#age').change(function() { 
-        // console.log( "the single search age is selected");
         // only age search result will show
         var ageid = $("#age").val().trim();
-        // console.log("age id is ", ageid);
         $.post("/api/boardGames/age/" + ageid, function(data) {
-            // console.log ("only age id data",data);
             var gamesArray = [];
             var nameArray = [];
             for ( var i = 0; i < data.length; i++) {
@@ -214,12 +182,9 @@ $(document).ready(function() {
 
     // Searches DB based off of the difficulty input ONLY
     $('#difficulty').change(function() { 
-        // console.log( "the single search difficulty is selected");
         // only difficulty search result will show
         var difficultyid = $("#difficulty").val().trim();
-        // console.log("difficulty id is ", difficultyid);
         $.post("/api/boardGames/difficulty/" + difficultyid, function(data) {
-            // console.log ("only difficulty id data", data);
             var gamesArray = [];
             var nameArray = [];
             for ( var i = 0; i < data.length; i++) {
@@ -234,10 +199,8 @@ $(document).ready(function() {
 
     // Searches DB based off of the number of players input ONLY
     $('#num-players').change(function() { 
-        // console.log( "the single search num-players is selected");
         // only number of players search result will show
         var numPlayersid = $("#num-players").val().trim();
-        // console.log("num-players id is ",numPlayersid);
         $.post("/api/boardGames/numPlayers/" + numPlayersid, function(data) {
             console.log ("only num-players id data", data);
             var gamesArray = [];
@@ -254,12 +217,9 @@ $(document).ready(function() {
 
     // Searches DB based off of the time to play input ONLY
     $('#time-play').change(function() { 
-        // console.log( "the single search time-play is selected");
         //only age search result will show
         var timePlayid = $("#time-play").val().trim();
-        // console.log("time-play id is ", timePlayid);
         $.post("/api/boardGames/timePlay/" + timePlayid,function(data) {
-            // console.log ("only time-play id data", data);
             var gamesArray = [];
             var nameArray = [];
             for ( var i = 0; i < data.length; i++) {
@@ -275,8 +235,6 @@ $(document).ready(function() {
 
     // Searches DB using all search parameters
     $("#submit-btn").on("click", function(event) {
-        // event.preventDefault();
-        // console.log("clicked");
 
         var newGameSearch = {
             category: $("#category").val().trim(),
@@ -285,12 +243,8 @@ $(document).ready(function() {
             numPlayers: $("#num-players").val().trim(),
             timeToPlay: $("#time-play").val().trim()
         }
-        // console.log(newGameSearch);
 
         $.post("/api/new", newGameSearch).then(function(data) {
-            // console.log("my new url", data);
-            // $('.game-area').empty();
-            // if (indexOf(data) > -1 )
             var gamesArray = [];
             var nameArray = [];
             var filterCategory = "ALL CATEGORIES";
@@ -305,4 +259,3 @@ $(document).ready(function() {
         });
     }); 
 });
-// });
