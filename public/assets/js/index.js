@@ -128,6 +128,28 @@ $(document).ready(function() {
     }
     }
 
+    // function display() {
+    //     var x = "yr";
+    //      show_image(x ,8) ;
+    //  }
+    function show_image (number) {
+        var x = number;
+       //  var y = id;
+        for (var i =0; i<x; i++){
+            var img = document.createElement("img");
+            img.height="30px";
+            
+            img.src = "http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png";
+            $(".game-area").append(img);
+           // document.getElementById(".game-area").appendChild(img);
+
+        }
+    }
+     
+    //  display();
+    //  show_image("y",9);
+     
+
     // Function that renders games using the boardGames, categories, and age models
     function renderGamesIndividual(data, filterCategory, selectedFilter){
         $(".game-area").children().text("");
@@ -143,10 +165,14 @@ $(document).ready(function() {
         chosenGame.append("<h2>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
        
          console.log("Returned from server:");
+         var dynamic="";
 
          for (var i = 0; i < data.length; i++) {
+             for (var j =0; j<data[i].rating; j++){  
+                dynamic+="<img src='"+ 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png'+"'/>";
+                }
             chosenGame.append("<div class='col-xs-4 col-md-4 text-center'>"+"<div class='thumbnail'>" +
-            "<img src='" +data[i].img + "' />" +
+            "<img id ='image1' src='" +data[i].img + "' />" +
             "<div class='caption'>"+
             "<div>" +"Game Name:  "+data[i].gameName + "</div>"+
             "<div>" +"Category: " + data[i].category.name+"</div>"+
@@ -157,24 +183,33 @@ $(document).ready(function() {
             "<div>" +"Average Time Needed to Play: "+ data[i].timeToPlay +"</div>"+
             "<div>" +"Manufacturer: "+ data[i].manufacturer + "</div>"+
             "<div>" +"Year: "+data[i].year+ "</div>"+
-            "<div class='movie_choice'>"+"Ratings: "+
-            "<div id='r1' class = 'rate_widget'>"+
-            "<div class='star_1 ratings_stars'>"+"</div>"+
-            "<div class='star_2 ratings_stars'>"+"</div>"+
-            "<div class='star_3 ratings_stars'>"+"</div>"+
-            "<div class='star_4 ratings_stars'>"+"</div>"+
-            "<div class='star_5 ratings_stars'>"+"</div>"+
-            "<div class='total_votes'>"+"rate"+"</div>"+"</div>"+"</div>"+
-            "</div></div></div>");
+            "<div>"+dynamic+"</div>"+
+           // "<div>" + " ratings "+show_image (data[i].rating)+"</div>"+
+            // "<div>"+"for(var i =0; i<data[i].rating; i++)"+"{"+"<img id ='image1' src='http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png' />" +"}"+"</div>"+
 
+            
+           // "<div class='rate'>"+show_image (data[i].rating)+"</div>"+
+            // "<div class='movie_choice'>"+"Ratings: "+
+            // "<div id='r1' class = 'rate_widget'>"+
+            // "<div class='star_1 ratings_stars'>"+"</div>"+
+            // "<div class='star_2 ratings_stars'>"+"</div>"+
+            // "<div class='star_3 ratings_stars'>"+"</div>"+
+            // "<div class='star_4 ratings_stars'>"+"</div>"+
+            // "<div class='star_5 ratings_stars'>"+"</div>"+
+            // "<div class='total_votes'>"+"rate"+"</div>"+"</div>"+"</div>"+
+            "</div></div></div>");
+          //  chosenGame.append(show_image (data[i].rating));
+
+//           var linkToAdd =show_image (data[i].rating);
+// var $linkToAdd = $(linkToAdd);
              $(".game-area").append(chosenGame);
+            //  $('#rate').append($linkToAdd);
+
+           //  $(".rate").append(show_image (data[i].rating));
+
          }
         }
     }
-
-    // function pageFunction(data){
-        
-    // }
 
     // Searches DB based off of the category input ONLY
     $('#category').change(function(){ 
