@@ -16,23 +16,3 @@ module.exports = function(sequelize, DataTypes) {
     };
     return Category;
   };
-
-/* category options for games:
-
-family
-kids
-adults
-party
-card game
-dice
-educational
-memory_game
-word_game
-action_game
-dexterity
-humor
-math
-military
-strategy
-puzzle
-miniatures */

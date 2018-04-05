@@ -1,36 +1,12 @@
+-- Seeds for Categories Model
 INSERT INTO categories (name)
 VALUES ("Family"), ("Kids"), ("Adults"), ("Party"), ("Card Game"), ("Dice"), ("Educational"), ("Memory Game"), ("Word Game"), ("Dexterity"), ("Humor"), ("Math"), ("Military"), ("Strategy"), ("Puzzle"), ("Miniatures"), ("Drawing");
 
-/*
-1	Family
-2	Kids
-3	Adults
-4	Party
-5	Card Game
-6	Dice
-7	Educational
-8	Memory Game
-9	Word Game
-10	Dexterity
-11	Humor
-12	Math
-13	Military
-14	Strategy
-15	Puzzle
-16	Miniatures
-17  Drawing
-*/
-
+-- Seeds for Age_Range Model
 INSERT INTO ages (age_range)
 VALUES ("Less than 8 years old"), ("8 - 13 years old"), ("13 Years and Up"), ("Adult Games Only");
 
-/*
-1	Less than 8 years old
-2	8 - 13 years old
-3	13 Years and Up
-4	Adult Games Only
-*/
-
+-- Seeds for boardGames Model
 INSERT INTO boardGames (gameName, category_id, age_id, difficulty, minPlayer, maxPlayer, timeToPlay, manufacturer, year, img) 
 VALUES ("Agricola", 5, 3, "Intermediate", 1, 5, "120 +", "Z-Man Games", 2008,  "https://cdn.shopify.com/s/files/1/1911/5793/products/agricola-strategy-board-game-games-and-hobbies-new-zealand-nz-296_1024x1024.jpg?v=1505674388");
 

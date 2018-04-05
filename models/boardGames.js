@@ -44,7 +44,7 @@ module.exports = function(sequelize, DataTypes) {
     {
     timestamps : false
     });
-    //saying boardGames has many Category 
+    // saying boardGames has many Category 
     BoardGames.associate = function(models) {
     
       BoardGames.belongsTo(models.category, {

@@ -25,7 +25,6 @@
 <body>
 
     <div class="container-fluid">
-
         <div class="row heading">
             <div>
                 <h1 class="heading-title">Board Game Discovery</h1>
@@ -67,6 +66,7 @@
                         <option class="drop-down" value="9">Word Game</option>
                     </select>
                 </div>
+
                 <div class="form-group">
                     <span class="add-game-title">Age Group</span>
                     <br>
@@ -78,6 +78,7 @@
                         <option class="drop-down" value="4">Adult Games Only</option>
                     </select>
                 </div>
+
                 <div class="form-group">
                     <span class="add-game-title">Difficulty</span>
                     <br>
@@ -88,6 +89,21 @@
                         <option class="drop-down" value="Complex">Complex</option>
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <span class="add-game-title">Game Length</span>
+                    <br>
+                    <select data-placeholder="" class="chosen-select" name="time-play" id="add-game-time-play">
+                        <option class="drop-down choose" value="" selected disabled>Choose</option>
+                        <option class="drop-down" value="10 or less">10 min. or less</option>
+                        <option class="drop-down" value="10 - 20">10 - 20 min.</option>
+                        <option class="drop-down" value="20 - 30">20 - 30 min.</option>
+                        <option class="drop-down" value="30 - 60">30 - 60 min.</option>
+                        <option class="drop-down" value="60 +">60 -119 min.</option>
+                        <option class="drop-down" value="60 +">120 + min.</option>
+                    </select>
+                </div>
+
                 <div class="form-group">
                     <span class="add-game-title" for="min-player">Minimum Players</span>
                     <input type="text" class="form-control" id="min-player" placeholder="Minimum Players">
@@ -95,18 +111,6 @@
                 <div class="form-group">
                     <span class="add-game-title" for="max-player">Maximum Players</span>
                     <input type="text" class="form-control" id="max-player" placeholder="Maximum Players">
-                </div>
-                <div class="form-group">
-                    <span class="add-game-title">Game Length (minutes)</span>
-                    <br>
-                    <select data-placeholder="" class="chosen-select" name="time-play" id="add-game-time-play">
-                        <option class="drop-down choose" value="" selected disabled>Choose</option>
-                        <option class="drop-down" value="10 or less">10 or less</option>
-                        <option class="drop-down" value="10 - 20">10 - 20</option>
-                        <option class="drop-down" value="20 - 30">20 - 30</option>
-                        <option class="drop-down" value="30 - 60">30 - 60</option>
-                        <option class="drop-down" value="60 +">60 +</option>
-                    </select>
                 </div>
                 <div class="form-group">
                     <span class="add-game-title" for="manufacturer">Manufacturer</span>
@@ -123,10 +127,8 @@
                 <div class="col-sm-offset-2 col-sm-12">
                     <button type="submit" id="add-game-btn" class="btn btn-primary">Add Game</button>
                 </div>
+            </form>
         </div>
-        </form>
-
-    </div>
     </div>
 
     <footer>
@@ -137,6 +139,7 @@
                 </a>
             </div>
         </div>
+        
         <div class="row">
             <div class="col-lg-12 footer-section">
                 <div class="rope-border-footer">
