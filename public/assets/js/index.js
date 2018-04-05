@@ -1,5 +1,36 @@
 $(document).ready(function() {
 
+    $('.ratings_stars').hover(
+        // Handles the mouseover
+        function() {
+            $(this).prevAll().andSelf().addClass('ratings_over');
+            $(this).nextAll().removeClass('ratings_vote'); 
+        },
+        // Handles the mouseout
+        function() {
+            $(this).prevAll().andSelf().removeClass('ratings_over');
+            set_votes($(this).parent());
+        }
+    );
+
+    $('.rate_widget').each(function(i) {
+        var widget = this;
+        var out_data = {
+            widget_id : $(widget).attr('id'),
+            fetch: 1
+        };
+        $.post(
+            'ratings.php',
+            out_data,
+            function(INFO) {
+                $(widget).data( 'fsr', INFO );
+                set_votes(widget);
+            },
+            'json'
+        );
+    });
+
+
     // clearing all the input files
     $("#reset-btn").on("click", function(){
         $("#category").val(""),
@@ -125,7 +156,16 @@ $(document).ready(function() {
             "<div>" +"Maximum Players: "+ data[i].maxPlayer +"</div>"+
             "<div>" +"Average Time Needed to Play: "+ data[i].timeToPlay +"</div>"+
             "<div>" +"Manufacturer: "+ data[i].manufacturer + "</div>"+
-            "<div>" +"Year: "+data[i].year+ "</div></div></div></div>");
+            "<div>" +"Year: "+data[i].year+ "</div>"+
+            "<div class='movie_choice'>"+"Ratings: "+
+            "<div id='r1' class = 'rate_widget'>"+
+            "<div class='star_1 ratings_stars'>"+"</div>"+
+            "<div class='star_2 ratings_stars'>"+"</div>"+
+            "<div class='star_3 ratings_stars'>"+"</div>"+
+            "<div class='star_4 ratings_stars'>"+"</div>"+
+            "<div class='star_5 ratings_stars'>"+"</div>"+
+            "<div class='total_votes'>"+"rate"+"</div>"+"</div>"+"</div>"+
+            "</div></div></div>");
 
              $(".game-area").append(chosenGame);
          }
@@ -193,7 +233,7 @@ $(document).ready(function() {
                 gamesArray.push(data[i]);
                }
            }
-            renderGames(gamesArray, "DIFFICULTY LEVEL", difficultyid);
+            renderGamesIndividual(gamesArray, "DIFFICULTY LEVEL", difficultyid);
         })
     });
 
