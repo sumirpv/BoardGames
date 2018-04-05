@@ -90,24 +90,24 @@ $(document).ready(function() {
             // chosenGame.addClass("caption");
             //  chosenGame.append("Games matching your search: <br><br>");
             chosenGame.append("<div class='row display-flex'>" + "</div>");
-            chosenGame.append("<h2>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
+            chosenGame.append("<h2 class='text-center'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
      
             // console.log("Returned from server:");
 
             for (var i = 0; i < data.length; i++) {
-                chosenGame.append("<div class='col-xs-4 col-md-4 text-center'>" + "<div class='thumbnail'>" +
-                "<img src='" + data[i].img + "' />" +
+                chosenGame.append("<div class='col-xs-4 col-md-4 text-justify'>" + "<div class='thumbnail'><br>" +
+                "<img id='thumb-img' src='" + data[i].img + "' /><br>" +
                 "<div class='caption'>" +
-                "<div>" + "Game Name: " + data[i].gameName + "</div>" +
-                "<div>" + "Category: " + data[i].name + "</div>" +
-                "<div>" + "Suggested Age Range:" + data[i].age_range + "</div>" +
-                "<div>" + "Difficulty Level: " + data[i].difficulty + "</div>" +
-                "<div>" + "Minimum Players: " + data[i].minPlayer + "</div>" +
-                "<div>" + "Maximum Players: " + data[i].maxPlayer + "</div>" +
-                "<div>" + "Average Time Needed to Play: " + data[i].timeToPlay + "</div>" +
-                "<div>" + "Manufacturer: " + data[i].manufacturer + "</div>" +
-                "<div>" + "Year: " + data[i].year + "</div>" +
-                "<div class='movie_choice'>" + "Ratings: " +
+                "<div>" + "<b>Game Name :</b><em> " + data[i].gameName + "</em></div>" +
+                "<div>" + "<b>Category :</b><em> " + data[i].name + "</em></div>" +
+                "<div>" + "<b>Age Range :</b><em> " + data[i].age_range + "</em></div>" +
+                "<div>" + "<b>Difficulty Level :</b><em> " + data[i].difficulty + "</em></div>" +
+                "<div>" + "<b>Minimum Players :</b><em> " + data[i].minPlayer + "</em></div>" +
+                "<div>" + "<b>Maximum Players :</b><em> " + data[i].maxPlayer + "</em></div>" +
+                "<div>" + "<b>Avg. Game Length :</b><em> " + data[i].timeToPlay + " mins.</em></div>" +
+                "<div>" + "<b>Manufacturer :</b><em> " + data[i].manufacturer + "</em></div>" +
+                "<div>" + "<b>Year :</b><em> " + data[i].year + "</em></div>" +
+                "<div class='movie_choice'>" + "<b>Ratings:</b> " +
                 "<div id='r1' class = 'rate_widget'>" +
                 "<div class='star_1 ratings_stars'>" + "</div>" +
                 "<div class='star_2 ratings_stars'>" + "</div>" + 
@@ -138,24 +138,24 @@ $(document).ready(function() {
             // chosenGame.addClass("caption");
             //  chosenGame.append("Games matching your search: <br><br>");
             chosenGame.append("<div class='row'>" + "</div>");
-            chosenGame.append("<h2>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
+            chosenGame.append("<h2 class='text-center'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
        
             // console.log("Returned from server:");
 
             for (var i = 0; i < data.length; i++) {
-                chosenGame.append("<div class='col-xs-4 col-md-4 text-center'>" + "<div class='thumbnail'>" +
-                "<img src='" + data[i].img + "' />" +
+                chosenGame.append("<div class='col-xs-4 col-md-4 text-justify'>" + "<div class='thumbnail'><br>" +
+                "<img id='thumb-img' src='" + data[i].img + "' /><br>" +
                 "<div class='caption'>" +
-                "<div><b>" + "Game Name:  " + data[i].gameName + "</div>" +
-                "<div>" + "Category: " + data[i].category.name + "</div>" + 
-                "<div>" + "Suggested Age Range:" + data[i].age.age_range+"</div>" +
-                "<div>" + "Difficulty Level: " + data[i].difficulty + "</div>" +
-                "<div>" + "Minimum Players: " + data[i].minPlayer + "</div>" +
-                "<div>" + "Maximum Players: " + data[i].maxPlayer + "</div>" +
-                "<div>" + "Average Time Needed to Play: " + data[i].timeToPlay + "</div>" +
-                "<div>" + "Manufacturer: " + data[i].manufacturer + "</div>" +
-                "<div>" + "Year: " + data[i].year + "</div>" +
-                "<div class='movie_choice'>" + "Ratings: " +
+                "<div><b>" + "<b>Game Name :</b><em>  " + data[i].gameName + "</em></div>" +
+                "<div>" + "<b>Category :</b><em> " + data[i].category.name + "</em></div>" + 
+                "<div>" + "<b>Age Range :</b><em> " + data[i].age.age_range+"</em></div>" +
+                "<div>" + "<b>Difficulty Level :</b><em> " + data[i].difficulty + "</em></div>" +
+                "<div>" + "<b>Minimum Players :</b><em> " + data[i].minPlayer + "</em></div>" +
+                "<div>" + "<b>Maximum Players :</b><em> " + data[i].maxPlayer + "</em></div>" +
+                "<div>" + "<b>Avg. Game Length :</b><em> " + data[i].timeToPlay + " mins.</em></div>" +
+                "<div>" + "<b>Manufacturer :</b><em> " + data[i].manufacturer + "</em></div>" +
+                "<div>" + "<b>Year :</b><em> " + data[i].year + "</em></div>" +
+                "<div class='movie_choice'>" + "<b>Ratings :</b> " +
                 "<div id='r1' class = 'rate_widget'>" +
                 "<div class='star_1 ratings_stars'>" + "</div>" +
                 "<div class='star_2 ratings_stars'>" + "</div>" +
