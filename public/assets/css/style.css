@@ -26,7 +26,6 @@ body {
 .heading-title {
     font-family: 'Bangers', cursive;
     font-size: 100px;
-    /* text-shadow: -5px 5px 2px black; */
     -webkit-text-stroke: 2px black;
     background: -webkit-linear-gradient(#e83426, #f7eb75, white);
     -webkit-background-clip: text;
@@ -85,7 +84,6 @@ body {
     font-size: 18px;
     text-transform: uppercase;
     color: black;
-    text-shadow: 1px 1px 4px rgb(104, 79, 72);
 }
 
 .first-dropdown {
@@ -98,11 +96,13 @@ body {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    border: 2px solid rgb(110, 72, 57);
+    height: 30px;
 }
 
 .thumbnail {
     height: 550px;
-  }
+}
 
 #submit-btn {
     width: 150px;
@@ -117,7 +117,8 @@ body {
     text-transform: uppercase;
     color: rgb(233, 199, 253);
     background-position: center;
-    border-radius: 20%;
+    border-radius: 15%;
+    height: 100px;
     border: 0 solid rgb(87, 42, 23);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
     outline: none;
@@ -136,7 +137,8 @@ body {
     text-transform: uppercase;
     color: white;
     background-position: center;
-    border-radius: 20%;
+    border-radius: 15%;
+    height: 100px;
     border: 0 solid rgb(87, 42, 23);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
     opacity: 0.8;
@@ -155,7 +157,8 @@ body {
     text-transform: uppercase;
     color: white;
     background-position: center;
-    border-radius: 20%;
+    border-radius: 15%;
+    height: 100px;
     border: 0 solid rgb(87, 42, 23);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
     opacity: 0.8;
@@ -175,7 +178,8 @@ body {
     text-transform: uppercase;
     color: rgb(233, 199, 253);
     background-position: center;
-    border-radius: 20%;
+    border-radius: 40%;
+    height: 100px;
     border: 0 solid rgb(87, 42, 23);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
     outline: none;
@@ -194,7 +198,8 @@ body {
     text-transform: uppercase;
     color: white;
     background-position: center;
-    border-radius: 20%;
+    border-radius: 40%;
+    height: 100px;
     border: 0 solid rgb(87, 42, 23);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
     opacity: 0.8;
@@ -213,7 +218,8 @@ body {
     text-transform: uppercase;
     color: white;
     background-position: center;
-    border-radius: 20%;
+    border-radius: 40%;
+    height: 100px;
     border: 0 solid rgb(87, 42, 23);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
     opacity: 0.8;
@@ -224,6 +230,7 @@ body {
     width: 150px;
     padding: 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
     background-image: url("../img/sapphire.png");
     background-size: 200px;
     font-family: 'Black Ops One';
@@ -232,7 +239,8 @@ body {
     text-transform: uppercase;
     color: rgb(233, 199, 253);
     background-position: center;
-    border-radius: 20%;
+    border-radius: 32%;
+    height: 100px;
     border: 0 solid rgb(87, 42, 23);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
     outline: none;
@@ -242,6 +250,7 @@ body {
     width: 150px;
     padding: 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
     background-image: url("../img/sapphire.png");
     background-size: 200px;
     font-family: 'Black Ops One';
@@ -250,7 +259,8 @@ body {
     text-transform: uppercase;
     color: white;
     background-position: center;
-    border-radius: 20%;
+    border-radius: 32%;
+    height: 100px;
     border: 0 solid rgb(87, 42, 23);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
     opacity: 0.8;
@@ -260,6 +270,7 @@ body {
     width: 150px;
     padding: 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
     background-image: url("../img/sapphire.png");
     background-size: 200px;
     font-family: 'Black Ops One';
@@ -268,7 +279,8 @@ body {
     text-transform: uppercase;
     color: white;
     background-position: center;
-    border-radius: 20%;
+    border-radius: 32%;
+    height: 100px;
     border: 0 solid rgb(87, 42, 23);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
     opacity: 0.8;
@@ -280,11 +292,18 @@ body {
     font-size: 18px;
     text-transform: uppercase;
     color: black;
-    text-shadow: 1px 1px 4px rgb(104, 79, 72);
 }
 
 .name-search {
     text-align: center;
+    padding-top: 20px;
+}
+
+#game-name {
+    font-family: 'Special Elite', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid rgb(110, 72, 57);
 }
 
 #category-title {
@@ -331,17 +350,16 @@ h4 {
     display: inline;
 }
 
-#submit-btn {
-    display: block;
-    /* margin: 0 auto; */
-}
-
 img {
     width: 200px;
     height: 200px;
 }
 
-.footer {
+.wood-box {
+    margin-bottom: 100px;
+}
+
+.footer-section {
     font-family: 'Black Ops One';
     font-size: 20px;
     text-transform: uppercase;
@@ -349,7 +367,6 @@ img {
     text-shadow: 1px 1px 4px rgb(104, 79, 72);
     bottom: 0;
     height: 50px;
-    margin-top: 300px;
     background-image: url("../img/wood.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -371,9 +388,8 @@ img {
     margin-top: -22px;
 }
 
-.home-btn {
-    content: url("../img/biplane.png");
-    width: 200px;
+.form-control {
+    font-size: 18px;
 }
 
 /* ===================================================
@@ -394,6 +410,7 @@ Add Game Page
     font-family: 'Special Elite', cursive;
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
 }
 
 .add-game-title {
@@ -402,30 +419,181 @@ Add Game Page
     font-weight: bold;
 }
 
-/* for the star ratings */
+.form-control {
+    border: 2px solid rgb(110, 72, 57);
+}
 
+.home-btn {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.home-btn:hover {
+    width: 200px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+.home-btn:active {
+    width: 200px;
+    margin: 0 auto;
+    opacity: 0.8;
+    transform: translateY(4px);
+}
+
+.forms-box {
+    margin-bottom: 100px;
+}
+
+#add-game-btn {
+    width: 150px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url("../img/jade.png");
+    background-size: 200px;
+    font-family: 'Black Ops One';
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(233, 199, 253);
+    background-position: center;
+    border-radius: 50%;
+    height: 100px;
+    border: 0 solid rgb(87, 42, 23);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
+    outline: none;
+}
+
+#add-game-btn:hover {
+    width: 150px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url("../img/jade.png");
+    background-size: 200px;
+    font-family: 'Black Ops One';
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+    background-position: center;
+    border-radius: 50%;
+    height: 100px;
+    border: 0 solid rgb(87, 42, 23);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
+    outline: none;
+    opacity: 0.8;
+}
+
+#add-game-btn:active {
+    width: 150px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url("../img/jade.png");
+    background-size: 200px;
+    font-family: 'Black Ops One';
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+    background-position: center;
+    border-radius: 50%;
+    height: 100px;
+    border: 0 solid rgb(87, 42, 23);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.8);
+    outline: none;
+    opacity: 0.8;
+    transform: translateY(4px);
+}
+
+@media (min-width: 768px) {
+    .col-sm-offset-2 {
+        margin-left: 0;
+    }
+}
+
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ===================================================
+Star Ratings
+=================================================== */
 
 .rate_widget {
-border:     1px solid #CCC;
-overflow:   visible;
-padding:    10px;
-position:   relative;
-width:      190px;
-height:     50px;
-
+    border: 1px solid #CCC;
+    overflow: visible;
+    padding: 10px;
+    position: relative;
+    width: 190px;
+    height: 50px;
 }
+
 .ratings_stars {
-background: url('../img/emptyStar1.png') no-repeat;
-float:      left;
-height:     28px;
-padding:    2px;
-width:      32px;
-background-size: contain;
+    background: url('../img/emptyStar1.png') no-repeat;
+    float: left;
+    height: 28px;
+    padding: 2px;
+    width: 32px;
+    background-size: contain;
+}
 
-}
 .ratings_vote {
-background: url('/assets/img/fullstar.jpeg') no-repeat;
+    background: url('/assets/img/fullstar.jpeg') no-repeat;
 }
+
 .ratings_over {
-background: url('/assets/img/highlightStar.jpeg') no-repeat;
+    background: url('/assets/img/highlightStar.jpeg') no-repeat;
 }

@@ -40,11 +40,11 @@
         <div class="rope-border-top">
         </div>
         <!-- Column 1 -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-lg-offset-3 forms-box">
             <form id="create-game">
                 <div class="form-group">
                     <span class="add-game-title" for="game-name">Name of Game</span>
-                    <input type="text" class="form-control" id="game-name" placeholder="Name">
+                    <input type="text" class="form-control" id="add-game-name" placeholder="Name">
                 </div>
                 <div class="form-group">
                     <span class="add-game-title">Category</span>
@@ -119,9 +119,8 @@
                     <span class="add-game-title" for="img-url">Game Image URL</span>
                     <input type="text" class="form-control" id="img-url" placeholder="Game Image URL : https://image-url.com">
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-primary">Add Game</button>
+                    <div class="col-sm-offset-2 col-sm-12">
+                        <button type="submit" id="add-game-btn" class="btn btn-primary">Add Game</button>
                     </div>
                 </div>
             </form>
@@ -129,16 +128,19 @@
         </div>
     </div>
 
-    <div class="home-btn">
-        <span>Home</span>
-    </div>
-
     <footer>
-        <div class="footer">
-            <div class="rope-border-footer">
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <a id="home" href="/">
+                    <img src="./assets/img/biplane-text.png" class="img-responsive home-btn"></a>
             </div>
-            Copyright &copy; 2018 Jenkins Noble Viswanathan
-            <a id="home" href="/">Home</a>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 footer-section">
+                <div class="rope-border-footer">
+                </div>
+                Copyright &copy; 2018 Jenkins Noble Viswanathan
+            </div>
         </div>
     </footer>
 

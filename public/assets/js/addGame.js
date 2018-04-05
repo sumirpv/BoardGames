@@ -30,7 +30,7 @@ $(document).ready(function() {
         event.preventDefault();
 
 
-        var nameInput = $("#game-name").val().trim();
+        var nameInput = $("#add-game-name").val().trim();
         var categoryInput = $("#add-game-category").val();
         var ageGroup = $("#add-game-age").val();
         var difficultyLevel = $("#add-game-difficulty").val();
