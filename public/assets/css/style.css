@@ -102,6 +102,7 @@ body {
 
 .thumbnail {
     height: 550px;
+    color: red;
 }
 
 #submit-btn {

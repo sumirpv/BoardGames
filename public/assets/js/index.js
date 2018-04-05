@@ -98,7 +98,7 @@ $(document).ready(function() {
                 chosenGame.append("<div class='col-xs-4 col-md-4 text-center'>" + "<div class='thumbnail'>" +
                 "<img src='" + data[i].img + "' />" +
                 "<div class='caption'>" +
-                "<div>" + "Game Name:  " + data[i].gameName + "</div>" +
+                "<div>" + "Game Name: " + data[i].gameName + "</div>" +
                 "<div>" + "Category: " + data[i].name + "</div>" +
                 "<div>" + "Suggested Age Range:" + data[i].age_range + "</div>" +
                 "<div>" + "Difficulty Level: " + data[i].difficulty + "</div>" +
@@ -146,7 +146,7 @@ $(document).ready(function() {
                 chosenGame.append("<div class='col-xs-4 col-md-4 text-center'>" + "<div class='thumbnail'>" +
                 "<img src='" + data[i].img + "' />" +
                 "<div class='caption'>" +
-                "<div>" + "Game Name:  " + data[i].gameName + "</div>" +
+                "<div><b>" + "Game Name:  " + data[i].gameName + "</div>" +
                 "<div>" + "Category: " + data[i].category.name + "</div>" + 
                 "<div>" + "Suggested Age Range:" + data[i].age.age_range+"</div>" +
                 "<div>" + "Difficulty Level: " + data[i].difficulty + "</div>" +
