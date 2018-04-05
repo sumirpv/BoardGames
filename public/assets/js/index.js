@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    // Displays game ratings from the DB
     $('.ratings_stars').hover(
         // Handles the mouseover
         function() {
@@ -97,7 +98,7 @@ $(document).ready(function() {
                 "<div>" + "<b>Avg. Game Length :</b><em> " + data[i].timeToPlay + " mins.</em></div>" +
                 "<div>" + "<b>Manufacturer :</b><em> " + data[i].manufacturer + "</em></div>" +
                 "<div>" + "<b>Year :</b><em> " + data[i].year + "</em></div>" +
-                "<div>"+ "<b>Ratings :</b> " +dynamic+"</div>"+
+                "<div>"+ "<b>Rating :</b> " + dynamic +"</div>" +
                 "</div></div></div>");
 
                 $(".game-area").append(chosenGame);
@@ -163,7 +164,7 @@ $(document).ready(function() {
                 "<div>" + "<b>Avg. Game Length :</b><em> " + data[i].timeToPlay + " mins.</em></div>" +
                 "<div>" + "<b>Manufacturer :</b><em> " + data[i].manufacturer + "</em></div>" +
                 "<div>" + "<b>Year :</b><em> " + data[i].year + "</em></div>" +
-                "<div>"+ "<b>Ratings :</b> " +dynamic+"</div>"+
+                "<div>"+ "<b>Rating :</b> " + dynamic +"</div>" +
                 "</div></div></div>");
 
                 $(".game-area").append(chosenGame);
