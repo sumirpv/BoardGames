@@ -378,8 +378,10 @@ h2 {
 h4 {
     display: inline;
 }
-
-img {
+img{
+    height: 30px;
+}
+image1 {
     width: 200px;
     height: 200px;
 }
@@ -629,7 +631,7 @@ Star Ratings
 }
 
 .ratings_stars {
-    background: url('../img/emptyStar1.png') no-repeat;
+    background: url('../img/fullstar.jpeg') no-repeat;
     float: left;
     height: 28px;
     padding: 2px;
@@ -638,7 +640,7 @@ Star Ratings
 }
 
 .ratings_vote {
-    background: url('/assets/img/fullstar.jpeg') no-repeat;
+    background: url('../img/fullstar.jpeg') no-repeat;
 }
 
 .ratings_over {
