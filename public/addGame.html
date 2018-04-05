@@ -24,22 +24,19 @@
 
 <body>
 
-    <!-- Main Container -->
     <div class="container-fluid">
-        <!-- Row 1 -->
+
         <div class="row heading">
-            <!-- Column 1 -->
             <div>
                 <h1 class="heading-title">Board Game Discovery</h1>
                 <h4 class="heading-subtitle">The Quest for the Perfect Game</h4>
             </div>
         </div>
     </div>
-    <!-- Row 2 -->
+
     <div class="row">
         <div class="rope-border-top">
         </div>
-        <!-- Column 1 -->
         <div class="col-lg-6 col-lg-offset-3 forms-box">
             <form id="create-game">
                 <div class="form-group">
@@ -48,6 +45,7 @@
                 </div>
                 <div class="form-group">
                     <span class="add-game-title">Category</span>
+                    <br>
                     <select data-placeholder="" class="chosen-select" name="category" id="add-game-category">
                         <option class="drop-down choose" value="" selected disabled>Choose</option>
                         <option class="drop-down" value="3">Adults</option>
@@ -71,6 +69,7 @@
                 </div>
                 <div class="form-group">
                     <span class="add-game-title">Age Group</span>
+                    <br>
                     <select data-placeholder="" class="chosen-select" name="age" id="add-game-age">
                         <option class="drop-down choose" value="" selected disabled>Choose</option>
                         <option class="drop-down" value="1">Less than 8 years old</option>
@@ -81,6 +80,7 @@
                 </div>
                 <div class="form-group">
                     <span class="add-game-title">Difficulty</span>
+                    <br>
                     <select data-placeholder="" class="chosen-select" name="difficulty" id="add-game-difficulty">
                         <option class="drop-down choose" value="" selected disabled>Choose</option>
                         <option class="drop-down" value="Simple">Simple</option>
@@ -97,7 +97,8 @@
                     <input type="text" class="form-control" id="max-player" placeholder="Maximum Players">
                 </div>
                 <div class="form-group">
-                    <span class="add-game-title">Game Length (in minutes)</span>
+                    <span class="add-game-title">Game Length (minutes)</span>
+                    <br>
                     <select data-placeholder="" class="chosen-select" name="time-play" id="add-game-time-play">
                         <option class="drop-down choose" value="" selected disabled>Choose</option>
                         <option class="drop-down" value="10 or less">10 or less</option>
@@ -119,20 +120,21 @@
                     <span class="add-game-title" for="img-url">Game Image URL</span>
                     <input type="text" class="form-control" id="img-url" placeholder="Game Image URL : https://image-url.com">
                 </div>
-                    <div class="col-sm-offset-2 col-sm-12">
-                        <button type="submit" id="add-game-btn" class="btn btn-primary">Add Game</button>
-                    </div>
+                <div class="col-sm-offset-2 col-sm-12">
+                    <button type="submit" id="add-game-btn" class="btn btn-primary">Add Game</button>
                 </div>
-            </form>
-
         </div>
+        </form>
+
+    </div>
     </div>
 
     <footer>
         <div class="row">
             <div class="col-lg-4 col-lg-offset-4">
                 <a id="home" href="/">
-                    <img src="./assets/img/biplane-text.png" class="img-responsive home-btn"></a>
+                    <img src="./assets/img/biplane-text.png" class="img-responsive home-btn">
+                </a>
             </div>
         </div>
         <div class="row">
