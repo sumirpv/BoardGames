@@ -61,21 +61,6 @@ $(document).ready(function() {
         })
     });
 
-    // function renderGames(data){
-    //    // $('.game-area').html('');
-    //   // $(".game-area").remove();
-    //   $(".game-area").children().text("");
-
-    //   if (data.length < 1){
-    //       alert("There is no games in your search parameters");
-    //   }
-    //   else {
-    //   var chosenGame = $("<div>");
-    //    //var chosenGame = $("<table/>");
-    //   // chosenGame.addClass("caption");
-    //   //  chosenGame.append("Games matching your search: <br><br>");
-    //   chosenGame.append("<div class='row display-flex'>"+"</div>");
-    // // Function that renders games using the boardGames model
     function renderGames(data, filterCategory, selectedFilter) {
         // $('.game-area').html('');
         // $(".game-area").remove();
@@ -85,6 +70,7 @@ $(document).ready(function() {
         }
         else {
             // console.log("data", data);
+            
             var chosenGame = $("<div>");
             // var chosenGame = $("<table/>");
             // chosenGame.addClass("caption");
@@ -95,6 +81,10 @@ $(document).ready(function() {
             // console.log("Returned from server:");
 
             for (var i = 0; i < data.length; i++) {
+                var dynamic="";
+                for (var j =0; j<data[i].rating; j++){  
+                    dynamic+="<img src='"+ 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png'+"'/>";
+                    };
                 chosenGame.append("<div class='col-xs-4 col-md-4 text-justify'>" + "<div class='thumbnail'><br>" +
                 "<img id='thumb-img' src='" + data[i].img + "' /><br>" +
                 "<div class='caption'>" +
@@ -107,20 +97,11 @@ $(document).ready(function() {
                 "<div>" + "<b>Avg. Game Length :</b><em> " + data[i].timeToPlay + " mins.</em></div>" +
                 "<div>" + "<b>Manufacturer :</b><em> " + data[i].manufacturer + "</em></div>" +
                 "<div>" + "<b>Year :</b><em> " + data[i].year + "</em></div>" +
-                "<div class='movie_choice'>" + "<b>Ratings:</b> " +
-                "<div id='r1' class = 'rate_widget'>" +
-                "<div class='star_1 ratings_stars'>" + "</div>" +
-                "<div class='star_2 ratings_stars'>" + "</div>" + 
-                "<div class='star_3 ratings_stars'>" + "</div>" + 
-                "<div class='star_4 ratings_stars'>" + "</div>" + 
-                "<div class='star_5 ratings_stars'>" + "</div>" +
-                "<div class='total_votes'>" + "rate" + "</div>" + "</div>" + "</div>" +
+                "<div>"+ "<b>Ratings :</b> " +dynamic+"</div>"+
                 "</div></div></div>");
 
                 $(".game-area").append(chosenGame);
 
-                // "<button type='button' class='btn btn-default'>"+
-                // "<span class='glyphicon glyphicon-star' aria-hidden='true'></span>"+"</button>"+"</div>"+
             }
         }
     }
@@ -155,6 +136,7 @@ $(document).ready(function() {
             alert("There is no games in your search parameters");
         }
         else {        
+            
             var chosenGame = $("<div>");
             //var chosenGame = $("<table/>");
             // chosenGame.addClass("caption");
@@ -165,6 +147,10 @@ $(document).ready(function() {
             // console.log("Returned from server:");
 
             for (var i = 0; i < data.length; i++) {
+                var dynamic="";
+                for (var j =0; j<data[i].rating; j++){  
+                    dynamic+="<img src='"+ 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png'+"'/>";
+                    };
                 chosenGame.append("<div class='col-xs-4 col-md-4 text-justify'>" + "<div class='thumbnail'><br>" +
                 "<img id='thumb-img' src='" + data[i].img + "' /><br>" +
                 "<div class='caption'>" +
@@ -177,62 +163,11 @@ $(document).ready(function() {
                 "<div>" + "<b>Avg. Game Length :</b><em> " + data[i].timeToPlay + " mins.</em></div>" +
                 "<div>" + "<b>Manufacturer :</b><em> " + data[i].manufacturer + "</em></div>" +
                 "<div>" + "<b>Year :</b><em> " + data[i].year + "</em></div>" +
-                "<div class='movie_choice'>" + "<b>Ratings :</b> " +
-                "<div id='r1' class = 'rate_widget'>" +
-                "<div class='star_1 ratings_stars'>" + "</div>" +
-                "<div class='star_2 ratings_stars'>" + "</div>" +
-                "<div class='star_3 ratings_stars'>" + "</div>" +
-                "<div class='star_4 ratings_stars'>" + "</div>" +
-                "<div class='star_5 ratings_stars'>" + "</div>" +
-                "<div class='total_votes'>" + "rate" + "</div>" + "</div>" + "</div>" +
+                "<div>"+ "<b>Ratings :</b> " +dynamic+"</div>"+
                 "</div></div></div>");
 
                 $(".game-area").append(chosenGame);
             }
-         console.log("Returned from server:");
-         var dynamic="";
-
-         for (var i = 0; i < data.length; i++) {
-             for (var j =0; j<data[i].rating; j++){  
-                dynamic+="<img src='"+ 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png'+"'/>";
-                }
-            chosenGame.append("<div class='col-xs-4 col-md-4 text-center'>"+"<div class='thumbnail'>" +
-            "<img id ='image1' src='" +data[i].img + "' />" +
-            "<div class='caption'>"+
-            "<div>" +"Game Name:  "+data[i].gameName + "</div>"+
-            "<div>" +"Category: " + data[i].category.name+"</div>"+
-            "<div>" +"Suggested Age Range:" + data[i].age.age_range+"</div>"+
-            "<div>" +"Difficulty Level: "+ data[i].difficulty + "</div>"+
-            "<div>" +"Minimum Players: "+ data[i].minPlayer +"</div>"+
-            "<div>" +"Maximum Players: "+ data[i].maxPlayer +"</div>"+
-            "<div>" +"Average Time Needed to Play: "+ data[i].timeToPlay +"</div>"+
-            "<div>" +"Manufacturer: "+ data[i].manufacturer + "</div>"+
-            "<div>" +"Year: "+data[i].year+ "</div>"+
-            "<div>"+dynamic+"</div>"+
-           // "<div>" + " ratings "+show_image (data[i].rating)+"</div>"+
-            // "<div>"+"for(var i =0; i<data[i].rating; i++)"+"{"+"<img id ='image1' src='http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png' />" +"}"+"</div>"+
-
-            
-           // "<div class='rate'>"+show_image (data[i].rating)+"</div>"+
-            // "<div class='movie_choice'>"+"Ratings: "+
-            // "<div id='r1' class = 'rate_widget'>"+
-            // "<div class='star_1 ratings_stars'>"+"</div>"+
-            // "<div class='star_2 ratings_stars'>"+"</div>"+
-            // "<div class='star_3 ratings_stars'>"+"</div>"+
-            // "<div class='star_4 ratings_stars'>"+"</div>"+
-            // "<div class='star_5 ratings_stars'>"+"</div>"+
-            // "<div class='total_votes'>"+"rate"+"</div>"+"</div>"+"</div>"+
-            "</div></div></div>");
-          //  chosenGame.append(show_image (data[i].rating));
-
-//           var linkToAdd =show_image (data[i].rating);
-// var $linkToAdd = $(linkToAdd);
-             $(".game-area").append(chosenGame);
-            //  $('#rate').append($linkToAdd);
-
-           //  $(".rate").append(show_image (data[i].rating));
-
-         }
         }
     }
 
