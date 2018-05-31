@@ -63,7 +63,7 @@ $(document).ready(function() {
     function renderGames(data, filterCategory, selectedFilter) {
         $(".game-area").children().text("");
         if (data.length < 1) {
-            alert("There is no games in your search parameters");
+            $("#no-games-found-modal").modal("show");
         }
         else {
             
@@ -97,6 +97,16 @@ $(document).ready(function() {
         }
     }
 
+    // Close modal animation
+    $("#modal-close-btn").on("click", function(event) {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
+
+    // Clear button animation
+    $("#reset-btn").on("click", function(event) {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    })
+
     function show_image (number) {
         var x = number;
         for (var i =0; i<x; i++){
@@ -113,7 +123,8 @@ $(document).ready(function() {
         $(".game-area").children().text("");
 
         if (data.length < 1) {
-            alert("There is no games in your search parameters");
+            // alert("There is no games in your search parameters");
+            $("#no-games-found-modal").modal("show");
         }
         else {        
             
