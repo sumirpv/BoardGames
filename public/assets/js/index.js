@@ -45,7 +45,7 @@ $(document).ready(function() {
 
     // Search DB by Game Name
     $("#submit-name-btn").on("click", function(event) {
-        event.preventDefault();
+        // event.preventDefault();
         var nameToSearch = $("#game-name").val().trim();
         $.post("/api/boardGames/" + nameToSearch, function(data) {
             var gamesArray = [];
