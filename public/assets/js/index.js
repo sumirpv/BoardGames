@@ -221,54 +221,163 @@ $(document).ready(function() {
     // $('#num-players').change(function() { 
     //     // console.log( "the single search num-players is selected");
     //     // only number of players search result will show
-    //     var numPlayersid = $("#num-players").val().trim();
-    //     // console.log("num-players id is ",numPlayersid);
-    //     $.post("/api/boardGames/numPlayers/" + numPlayersid, function(data) {
-    //         console.log ("only num-players id data", data);
-    //         var gamesArray = [];
-    //         var nameArray = [];
-    //         for ( var i = 0; i < data.length; i++) {
-    //             if (nameArray.indexOf(data[i].gameName) == -1) {
-    //                 nameArray.push(data[i].gameName);
-    //                 gamesArray.push(data[i]);
-    //             }
-    //         }
-    //         renderGames(gamesArray, "NUMBER OF PLAYERS", numPlayersid);
-    //     })
+        // var numPlayersid = $("#num-players").val().trim();
+        // // console.log("num-players id is ",numPlayersid);
+        // $.post("/api/boardGames/numPlayers/" + numPlayersid, function(data) {
+        //     console.log ("only num-players id data", data);
+        //     var gamesArray = [];
+        //     var nameArray = [];
+        //     for ( var i = 0; i < data.length; i++) {
+        //         if (nameArray.indexOf(data[i].gameName) == -1) {
+        //             nameArray.push(data[i].gameName);
+        //             gamesArray.push(data[i]);
+        //         }
+        //     }
+        //     renderGames(gamesArray, "NUMBER OF PLAYERS", numPlayersid);
+        // })
     // });
 
     // Searches DB based off of the time to play input ONLY
     // $('#time-play').change(function() { 
     //     // console.log( "the single search time-play is selected");
     //     //only age search result will show
-    //     var timePlayid = $("#time-play").val().trim();
-    //     // console.log("time-play id is ", timePlayid);
-    //     $.post("/api/boardGames/timePlay/" + timePlayid,function(data) {
-    //         // console.log ("only time-play id data", data);
-    //         var gamesArray = [];
-    //         var nameArray = [];
-    //         for ( var i = 0; i < data.length; i++) {
-    //             if (nameArray.indexOf(data[i].gameName) == -1) {
-    //                 nameArray.push(data[i].gameName);
-    //                 gamesArray.push(data[i]);
-    //             }
-    //         }
-    //         renderGames(gamesArray, "PLAY TIME (in minutes)", timePlayid);
-    //     })
+        // var timePlayid = $("#time-play").val().trim();
+        // // console.log("time-play id is ", timePlayid);
+        // $.post("/api/boardGames/timePlay/" + timePlayid,function(data) {
+        //     // console.log ("only time-play id data", data);
+        //     var gamesArray = [];
+        //     var nameArray = [];
+        //     for ( var i = 0; i < data.length; i++) {
+        //         if (nameArray.indexOf(data[i].gameName) == -1) {
+        //             nameArray.push(data[i].gameName);
+        //             gamesArray.push(data[i]);
+        //         }
+        //     }
+        //     renderGames(gamesArray, "PLAY TIME (in minutes)", timePlayid);
+        // })
     // });
 
 
     // Searches DB using all search parameters
     $("#submit-btn").on("click", function(event) {
 
-        var newGameSearch = {
-            category: $("#category").val().trim(),
-            age: $("#age").val().trim(),
-            difficulty: $("#difficulty").val().trim(),
-            numPlayers: $("#num-players").val().trim(),
-            timeToPlay: $("#time-play").val().trim()
-        }
+        // var categoryid = $("#category").val().trim();
+        // var ageid = $("#age").val().trim();
+        // var difficultyid = $("#difficulty").val().trim();
+        // var numPlayersid = $("#num-players").val().trim();
+        // var timePlayid = $("#time-play").val().trim();
+        
+        if($("#category").val() != null &&
+        $("#age").val() === null &&
+        $("#difficulty").val() === null &&
+        $("#num-players").val() === null &&
+        $("#time-play").val() === null 
+            ){
+           var categoryid = $("#category").val().trim();
 
+            $.post("/api/boardGames/category/" + categoryid, function(data) {
+                // console.log ("only category id data", data);
+                var gamesArray = [];
+                var nameArray = [];
+                for ( var i = 0; i < data.length; i++) {
+                    if (nameArray.indexOf(data[i].gameName) == -1) {
+                        nameArray.push(data[i].gameName);
+                        gamesArray.push(data[i]);
+                    }
+                }
+                renderGamesIndividual(gamesArray, "CATEGORY", categoryid);
+            })
+        } 
+        else if( 
+            $("#category").val() === null &&
+            $("#age").val() != null &&
+        $("#difficulty").val() === null &&
+        $("#num-players").val() === null &&
+        $("#time-play").val() === null
+         ){
+        var ageid = $("#age").val().trim();
+        $.post("/api/boardGames/age/" + ageid, function(data) {
+            var gamesArray = [];
+            var nameArray = [];
+            for ( var i = 0; i < data.length; i++) {
+                if (nameArray.indexOf(data[i].gameName) == -1) {
+                    nameArray.push(data[i].gameName);
+                    gamesArray.push(data[i]);
+                }
+            }
+            renderGamesIndividual(gamesArray, "AGE GROUP", ageid);
+        })
+        } else if(
+            $("#category").val() === null &&
+            $("#age").val() === null &&
+            $("#difficulty").val() != null &&
+        $("#num-players").val() === null &&
+        $("#time-play").val() === null
+        ){
+            var difficultyid = $("#difficulty").val().trim();
+            console.log("difficulty id is ", difficultyid);
+            $.post("/api/boardGames/difficulty/" + difficultyid, function(data) {
+                // console.log ("only difficulty id data", data);
+                var gamesArray = [];
+                var nameArray = [];
+                for ( var i = 0; i < data.length; i++) {
+                    if (nameArray.indexOf(data[i].gameName) == -1) {
+                        nameArray.push(data[i].gameName);
+                        gamesArray.push(data[i]);
+                    }
+                }
+                renderGamesIndividual(gamesArray, "DIFFICULTY LEVEL", difficultyid);
+            })            
+        } else if(
+            $("#category").val() === null &&
+            $("#age").val() === null &&
+            $("#difficulty").val() === null &&
+            $("#num-players").val() != null &&
+            $("#time-play").val() === null
+        ){
+            var numPlayersid = $("#num-players").val().trim();
+            // console.log("num-players id is ",numPlayersid);
+            $.post("/api/boardGames/numPlayers/" + numPlayersid, function(data) {
+                console.log ("only num-players id data", data);
+                var gamesArray = [];
+                var nameArray = [];
+                for ( var i = 0; i < data.length; i++) {
+                    if (nameArray.indexOf(data[i].gameName) == -1) {
+                        nameArray.push(data[i].gameName);
+                        gamesArray.push(data[i]);
+                    }
+                }
+                renderGames(gamesArray, "NUMBER OF PLAYERS", numPlayersid);
+            })
+        } else if(
+            $("#category").val() === null &&
+            $("#age").val() === null &&
+            $("#difficulty").val() === null &&
+            $("#num-players").val() === null &&
+            $("#time-play").val() != null    
+        ){
+            var timePlayid = $("#time-play").val().trim();
+            // console.log("time-play id is ", timePlayid);
+            $.post("/api/boardGames/timePlay/" + timePlayid,function(data) {
+                // console.log ("only time-play id data", data);
+                var gamesArray = [];
+                var nameArray = [];
+                for ( var i = 0; i < data.length; i++) {
+                    if (nameArray.indexOf(data[i].gameName) == -1) {
+                        nameArray.push(data[i].gameName);
+                        gamesArray.push(data[i]);
+                    }
+                }
+                renderGames(gamesArray, "PLAY TIME (in minutes)", timePlayid);
+            })
+        }else{
+            var newGameSearch = {
+                category: $("#category").val().trim(),
+                age: $("#age").val().trim(),
+                difficulty: $("#difficulty").val().trim(),
+                numPlayers: $("#num-players").val().trim(),
+                timeToPlay: $("#time-play").val().trim()
+            }
         $.post("/api/new", newGameSearch).then(function(data) {
             var gamesArray = [];
             var nameArray = [];
@@ -282,5 +391,6 @@ $(document).ready(function() {
             }
             renderGames(gamesArray, filterCategory, selectedFilter);
         });
+        }
     }); 
 });
