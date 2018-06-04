@@ -16,9 +16,11 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Aldrich|Bangers|Black+Ops+One|Special+Elite|Share+Tech+Mono" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
+    <!--Import favicon-->
+    <link rel="shortcut icon" type="image/png" href="./assets/img/dice.png">
+
+    <!--Import jquery-->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -36,14 +38,11 @@
         <div class="rope-border-top">
         </div>
         <div class="outter-box">
-        <div class="row">
-           
+            <div class="row enter-game-section">
+                <p class="add-game-header">Please enter game attributes:</p>
                 <form id="create-game">
-                    <div class="col-lg-offset-1 col-lg-5 forms-box forms-box-left">
+                    <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-5 forms-box">
                         <div class="form-group">
-                            <span class="add-game-title">Please enter the game attributes:</span>
-                            <br>
-                            <br>
                             <span class="add-game-title" for="game-name">Name of Game</span>
                             <input type="text" class="form-control" id="add-game-name" placeholder="Name">
                         </div>
@@ -109,7 +108,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-lg-5 forms-box">
+                    <div class="col-lg-5 col-md-5 col-sm-5 forms-box">
                         <div class="form-group">
                             <span class="add-game-title" for="min-player">Minimum Players</span>
                             <input type="text" class="form-control" id="min-player" placeholder="Minimum Players">
@@ -126,16 +125,17 @@
                             <span class="add-game-title" for="year">Year Released</span>
                             <input type="text" class="form-control" id="year" placeholder="Year of Release : YYYY">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group last-form-group">
                             <span class="add-game-title" for="img-url">Game Image URL</span>
                             <input type="text" class="form-control" id="img-url" placeholder="Game Image URL : https://image-url.com">
                         </div>
                     </div>
+                </form>
             </div>
             <div class="col-sm-offset-2 col-sm-12 lower-table">
                 <button type="submit" id="add-game-btn" class="btn btn-primary">Add Game</button>
             </div>
-            </form>
+
         </div>
     </div>
     <div class="rope-border-bottom">
@@ -153,7 +153,7 @@
             <div class="col-lg-12 footer-section">
                 <div class="rope-border-footer">
                 </div>
-                Copyright &copy; 2018 Jenkins Noble Viswanathan
+                <p class="footer-words">Copyright &copy; 2018 Jenkins Noble Viswanathan</p>
             </div>
         </div>
     </footer>

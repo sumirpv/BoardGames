@@ -95,10 +95,9 @@ body {
 
 .dropdown-container {
     background-image: url("../img/wood2.jpg");
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 54%;
 }
 
 .dropdown-ul {
@@ -123,9 +122,8 @@ body {
     font-weight: bold;
     text-align: center;
     border: 2px solid rgb(110, 72, 57);
-    height: 30px;
-    border-radius: 5px;
-    /* background-image: url("../img/paper.jpg"); */
+    height: 45px;
+    border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -309,7 +307,7 @@ h4 {
     display: inline;
 }
 
-img{
+img {
     height: 30px;
 }
 
@@ -329,7 +327,7 @@ image1 {
     color: black;
     text-shadow: 1px 1px 4px rgb(104, 79, 72);
     bottom: 0;
-    height: 50px;
+    height: 60px;
     background-image: url("../img/wood.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -339,6 +337,10 @@ image1 {
     border-top: 1px solid grey;
     width: 100%;
     z-index: 90;
+}
+
+.footer-words {
+    margin-top: 6px;
 }
 
 .rope-border-footer {
@@ -352,18 +354,24 @@ image1 {
 }
 
 /* ===================================================
-Media Queries
-=================================================== */
-
-@media (min-width: 1200px) {
-    .col-lg-2 {
-        width: 14.666667%;
-    }
-}
-
-/* ===================================================
 Add Game Page
 =================================================== */
+
+.enter-game-section {
+    padding: 90px;
+    background-image: url(../img/scroll.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75% 100%;
+}
+
+.add-game-header {
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
 
 #create-game {
     font-family: 'Special Elite', cursive;
@@ -386,22 +394,13 @@ Add Game Page
 }
 
 .outter-box {
-    background-image: url("../img/mayan.jpg");
+    background-image: url(../img/leather.jpg);
     background-position: center;
-    /* background-repeat: repeat-y; */
-    background-size: 100.5%;
     padding: 50px 0;
     border-radius: 15px;
     box-shadow: 0 30px 70px 10px black;
-}
-
-.forms-box {
-    padding: 90px;
-    border-radius: 20px;
-    background-image: url(../img/scroll.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 87%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .form-control {
@@ -494,9 +493,29 @@ Add Game Page
     transform: translateY(4px);
 }
 
+/* ===================================================
+Media Queries for both pages
+=================================================== */
+
+@media (min-width: 1200px) {
+    .col-lg-2 {
+        width: 14.666667%;
+    }
+}
+
 @media (min-width: 768px) {
     .col-sm-offset-2 {
         margin-left: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .footer-section {
+        font-size: 16px;
+        height: 75px;
+    }
+    .forms-box {
+        background-size: 130%;
     }
 }
 
@@ -583,13 +602,15 @@ Star Ratings
 .ratings_over {
     background: url('/assets/img/highlightStar.jpeg') no-repeat;
 }
+
 .total_votes {
     background: #eaeaea;
     top: 58px;
     left: 0;
     padding: 5px;
-    position:   absolute;  
-} 
+    position: absolute;
+}
+
 .movie_choice {
     font: 10px verdana, sans-serif;
     margin: 0 auto 40px auto;
