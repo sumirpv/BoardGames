@@ -38,29 +38,17 @@ $(document).ready(function() {
         }
         // Constructing a newGame object to hand to the database
         var newGame = {
-
-            gameName : nameInput,
-
-            category_id : categoryInput,
-
-            age_id : ageGroup,
-
-            difficulty : difficultyLevel,
-
-            minPlayer : minimumPlayer,
-
-            maxPlayer : maximumPlayer,
-
-            timeToPlay : gameTime,
-
-            manufacturer : manufacturerName,
-
-            year : releaseYear,
-
-            img : imageUrl,
-
+            gameName: nameInput,
+            category_id: categoryInput,
+            age_id: ageGroup,
+            difficulty: difficultyLevel,
+            minPlayer: minimumPlayer,
+            maxPlayer: maximumPlayer,
+            timeToPlay: gameTime,
+            manufacturer: manufacturerName,
+            year: releaseYear,
+            img: imageUrl,
         }
-
         submitGame(newGame);
     }
 
@@ -71,6 +59,4 @@ $(document).ready(function() {
             location.reload();
         });
     }
-
-
 })

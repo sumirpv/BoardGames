@@ -142,20 +142,23 @@ h2 {
 #thumb-img {
     width: 200px;
     height: 200px;
-    border: 2px solid gray;
+    border-radius: 20px;
+    border: 3px solid rgb(110, 72, 57);
 }
 
 .thumbnail {
     height: 550px;
-    background-image: url("../img/paper.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 20px;
+    background: -webkit-linear-gradient(#e83426, #f7eb75, white);
+    box-shadow: 0 10px 9px 0 rgba(32, 32, 32, 0.8), 0 10px 53px 0 rgba(32, 32, 32, 0.8);
+    border: 3px solid rgb(110, 72, 57);
+    border-radius: 20px;
 }
 
 .thumbnail .caption {
-    padding: 10px 50px;
+    padding: 10px 40px;
     font-family: 'Special Elite', cursive;
+    font-size: 17px;
 }
 
 #submit-btn {
@@ -224,7 +227,7 @@ h2 {
     width: 150px;
     padding: 10px;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     background-image: url("../img/sapphire.png");
     background-size: 200px;
     font-family: 'Black Ops One';
@@ -317,7 +320,7 @@ image1 {
 }
 
 .wood-box {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 
 .footer-section {

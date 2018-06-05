@@ -31,7 +31,6 @@ $(document).ready(function() {
         );
     });
 
-
     // clearing all the input files
     $("#reset-btn").on("click", function() {
         $("#category").val(""),
@@ -66,7 +65,6 @@ $(document).ready(function() {
             $("#no-games-found-modal").modal("show");
         }
         else {
-            
             var chosenGame = $("<div>");
             chosenGame.append("<div class='row display-flex'>" + "</div>");
             chosenGame.append("<h2 class='text-center'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
@@ -92,7 +90,6 @@ $(document).ready(function() {
                 "</div></div></div>");
 
                 $(".game-area").append(chosenGame);
-
             }
         }
     }
