@@ -54,21 +54,6 @@ body {
     padding: 15px;
 }
 
-@media (max-width: 900px) {
-    .heading-title {
-        font-size: 80px;
-    }
-}
-
-@media (max-width: 700px) {
-    .heading-title {
-        font-size: 50px;
-    }
-    .heading-subtitle {
-        font-size: 25px;
-    }
-}
-
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
@@ -81,7 +66,16 @@ body {
     width: 100%;
     z-index: 100;
     margin-top: -18px;
-    padding-bottom: 60px;
+}
+
+.directions {
+    font-family: 'Black Ops One';
+    font-size: 24px;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgb(104, 79, 72);
+    margin-top: -10px;
 }
 
 .rope-border-bottom {
@@ -100,8 +94,8 @@ body {
     background-size: cover;
 }
 
-.dropdown-ul {
-    width: 121%;
+.full-dropdown {
+    text-align: center;
 }
 
 .dropdown-title {
@@ -109,14 +103,12 @@ body {
     font-size: 18px;
     text-transform: uppercase;
     color: black;
-}
-
-.first-dropdown {
-    margin-left: 49px;
+    text-shadow: 1px 1px 4px rgb(104, 79, 72);
+    text-align: center;
 }
 
 .chosen-select {
-    width: 70%;
+    width: 90%;
     font-family: 'Special Elite', cursive;
     font-size: 18px;
     font-weight: bold;
@@ -147,7 +139,8 @@ h2 {
 }
 
 .thumbnail {
-    height: 550px;
+    height: 600px;
+    display: inline-block;
     margin: 20px;
     background: -webkit-linear-gradient(#e83426, #f7eb75, white);
     box-shadow: 0 10px 9px 0 rgba(32, 32, 32, 0.8), 0 10px 53px 0 rgba(32, 32, 32, 0.8);
@@ -161,11 +154,15 @@ h2 {
     font-size: 17px;
 }
 
+.submit-col {
+    text-align: center;
+}
+
 #submit-btn {
     width: 150px;
     padding: 10px;
     margin-top: 20px;
-    margin-left: 45%;
+    /* margin-left: 45%; */
     background-image: url("../img/emerald.png");
     background-size: 170px;
     font-family: 'Black Ops One';
@@ -192,11 +189,15 @@ h2 {
     transform: translateY(4px);
 }
 
+.reset-col {
+    text-align: center;
+}
+
 #reset-btn {
     width: 150px;
     padding: 10px;
     margin-top: 20px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     background-image: url("../img/ruby.png");
     background-size: 170px;
     font-family: 'Black Ops One';
@@ -227,7 +228,7 @@ h2 {
     width: 150px;
     padding: 10px;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     background-image: url("../img/sapphire.png");
     background-size: 200px;
     font-family: 'Black Ops One';
@@ -259,6 +260,7 @@ h2 {
     font-size: 18px;
     text-transform: uppercase;
     color: black;
+    text-shadow: 1px 1px 4px rgb(104, 79, 72);
 }
 
 .name-search {
@@ -266,25 +268,25 @@ h2 {
     padding-top: 20px;
 }
 
-#category-title {
+/* #category-title {
     margin-left: 72px;
-}
+} */
 
-#age-title {
+/* #age-title {
     margin-left: 69px;
-}
+} */
 
-#difficulty-title {
+/* #difficulty-title {
     margin-left: 75px;
-}
+} */
 
-#players-title {
+/* #players-title {
     margin-left: 60px;
-}
+} */
 
-#time-title {
+/* #time-title {
     margin-left: 60px;
-}
+} */
 
 #add-game {
     color: red;
@@ -296,19 +298,24 @@ h2 {
     text-shadow: 1px 1px 4px rgb(255, 255, 255);
 }
 
-.dropdown-ul {
+/* .dropdown-ul {
     list-style-type: none;
     list-style: none;
-}
+} */
+
+/* *************** */
+/* ul, menu, dir {
+    -webkit-padding-start: 0px;
+} */
 
 .dropdown-li {
     display: inline;
     margin-left: 20px;
 }
 
-h4 {
+/* h4 {
     display: inline;
-}
+} */
 
 img {
     height: 30px;
@@ -412,7 +419,7 @@ Add Game Page
     border: 2px solid rgb(110, 72, 57);
     border-radius: 10px;
     font-size: 18px;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     box-shadow: 0 8px 26px -10px black;
 }
@@ -440,7 +447,7 @@ Add Game Page
 #add-game-btn {
     width: 150px;
     padding: 10px;
-    margin: 110px 0 60px 0;
+    margin: 50px 0 60px 0;
     background-image: url("../img/jade.png");
     background-size: 200px;
     font-family: 'Black Ops One';
@@ -482,7 +489,7 @@ Add Game Page
 
 .home-btn {
     width: 200px;
-    margin: 200px auto 0 auto;
+    margin: 200px auto -10px auto;
 }
 
 .home-btn:hover {
@@ -496,85 +503,49 @@ Add Game Page
     transform: translateY(4px);
 }
 
+
 /* ===================================================
 Media Queries for both pages
 =================================================== */
 
-@media (min-width: 1200px) {
-    .col-lg-2 {
-        width: 14.666667%;
+@media only screen and (max-width: 1300px) {
+    .directions {
+        font-size: 20px;
     }
 }
 
-@media (min-width: 768px) {
-    .col-sm-offset-2 {
-        margin-left: 0;
+@media only screen and (max-width: 900px) {
+    .heading-title {
+        font-size: 80px;
     }
 }
 
-@media (max-width: 560px) {
+@media only screen and (max-width: 700px) {
+    .heading-title {
+        font-size: 50px;
+    }
+    .heading-subtitle {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .heading {
+        height: 210px;
+    }
     .footer-section {
         font-size: 16px;
         height: 75px;
     }
-    .forms-box {
-        background-size: 130%;
+    .footer-section {
+        background-position: 50% 94%;
     }
 }
 
-.col-xs-1,
-.col-sm-1,
-.col-md-1,
-.col-lg-1,
-.col-xs-2,
-.col-sm-2,
-.col-md-2,
-.col-lg-2,
-.col-xs-3,
-.col-sm-3,
-.col-md-3,
-.col-lg-3,
-.col-xs-4,
-.col-sm-4,
-.col-md-4,
-.col-lg-4,
-.col-xs-5,
-.col-sm-5,
-.col-md-5,
-.col-lg-5,
-.col-xs-6,
-.col-sm-6,
-.col-md-6,
-.col-lg-6,
-.col-xs-7,
-.col-sm-7,
-.col-md-7,
-.col-lg-7,
-.col-xs-8,
-.col-sm-8,
-.col-md-8,
-.col-lg-8,
-.col-xs-9,
-.col-sm-9,
-.col-md-9,
-.col-lg-9,
-.col-xs-10,
-.col-sm-10,
-.col-md-10,
-.col-lg-10,
-.col-xs-11,
-.col-sm-11,
-.col-md-11,
-.col-lg-11,
-.col-xs-12,
-.col-sm-12,
-.col-md-12,
-.col-lg-12 {
-    position: relative;
-    min-height: 1px;
-    padding-left: 0;
-    padding-right: 0;
-}
 
 /* ===================================================
 Star Ratings
