@@ -258,6 +258,7 @@ $(document).ready(function() {
     // Searches DB using all search parameters
     $("#submit-btn").on("click", function(event) {
 
+
         // var categoryid = $("#category").val().trim();
         // var ageid = $("#age").val().trim();
         // var difficultyid = $("#difficulty").val().trim();
@@ -389,5 +390,10 @@ $(document).ready(function() {
             renderGames(gamesArray, filterCategory, selectedFilter);
         });
         }
+        $("#category").val("");
+        $("#age").val("");
+        $("#difficulty").val("");
+        $("#num-players").val("");
+        $("#time-play").val("");
     }); 
 });
