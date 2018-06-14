@@ -44,16 +44,6 @@ body {
     text-shadow: -4px 3px 2px #e83426;
 }
 
-.modal-header {
-    background-color: #e83426d1;
-    padding-left: 60px;
-    padding-bottom: 15px;
-}
-
-.modal-body {
-    padding: 15px;
-}
-
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
@@ -116,10 +106,14 @@ body {
     border: 2px solid rgb(110, 72, 57);
     height: 45px;
     border-radius: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: white;
+    color: rgb(175, 175, 175);
+    padding-left: 10px;
     box-shadow: 0 10px 26px -10px black;
+}
+
+option {
+    color:black;
 }
 
 h2 {
@@ -127,31 +121,43 @@ h2 {
     font-weight: bold;
 }
 
-#thumb {
-    margin: 0 auto;
+.modal-header {
+    background-color: #e83426d1;
+    padding-left: 60px;
+    padding-bottom: 15px;
+}
+
+.modal-body {
+    padding: 15px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 640px;
+    margin: 20px 0;
+    background: -webkit-linear-gradient(#e83426, #f7eb75, white);
+    box-shadow: 0 10px 9px 0 rgba(32, 32, 32, 0.8), 0 10px 53px 0 rgba(32, 32, 32, 0.8);
+    border: 3px solid rgb(110, 72, 57);
+    border-radius: 20px;
+    overflow: auto;
 }
 
 #thumb-img {
     width: 200px;
     height: 200px;
     border-radius: 20px;
+    background-color: white;
     border: 3px solid rgb(110, 72, 57);
 }
 
-.thumbnail {
-    height: 600px;
-    display: inline-block;
-    margin: 20px;
-    background: -webkit-linear-gradient(#e83426, #f7eb75, white);
-    box-shadow: 0 10px 9px 0 rgba(32, 32, 32, 0.8), 0 10px 53px 0 rgba(32, 32, 32, 0.8);
-    border: 3px solid rgb(110, 72, 57);
-    border-radius: 20px;
+.game-name {
+    font-size: 24px;
 }
 
 .thumbnail .caption {
-    padding: 10px 40px;
+    padding: 0px 20px;
     font-family: 'Special Elite', cursive;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .submit-col {
@@ -162,7 +168,6 @@ h2 {
     width: 150px;
     padding: 10px;
     margin-top: 20px;
-    /* margin-left: 45%; */
     background-image: url("../img/emerald.png");
     background-size: 170px;
     font-family: 'Black Ops One';
@@ -197,7 +202,6 @@ h2 {
     width: 150px;
     padding: 10px;
     margin-top: 20px;
-    /* margin-left: 50px; */
     background-image: url("../img/ruby.png");
     background-size: 170px;
     font-family: 'Black Ops One';
@@ -268,26 +272,6 @@ h2 {
     padding-top: 20px;
 }
 
-/* #category-title {
-    margin-left: 72px;
-} */
-
-/* #age-title {
-    margin-left: 69px;
-} */
-
-/* #difficulty-title {
-    margin-left: 75px;
-} */
-
-/* #players-title {
-    margin-left: 60px;
-} */
-
-/* #time-title {
-    margin-left: 60px;
-} */
-
 #add-game {
     color: red;
     text-shadow: 1px 1px 4px rgb(255, 255, 255);
@@ -298,24 +282,10 @@ h2 {
     text-shadow: 1px 1px 4px rgb(255, 255, 255);
 }
 
-/* .dropdown-ul {
-    list-style-type: none;
-    list-style: none;
-} */
-
-/* *************** */
-/* ul, menu, dir {
-    -webkit-padding-start: 0px;
-} */
-
 .dropdown-li {
     display: inline;
     margin-left: 20px;
 }
-
-/* h4 {
-    display: inline;
-} */
 
 img {
     height: 30px;
@@ -362,6 +332,7 @@ image1 {
     margin-bottom: -18px;
     margin-top: -22px;
 }
+
 
 /* ===================================================
 Add Game Page
@@ -421,6 +392,7 @@ Add Game Page
     font-size: 18px;
     width: 90%;
     margin: 0 auto;
+    background-color: white;
     box-shadow: 0 8px 26px -10px black;
 }
 
@@ -505,49 +477,6 @@ Add Game Page
 
 
 /* ===================================================
-Media Queries for both pages
-=================================================== */
-
-@media only screen and (max-width: 1300px) {
-    .directions {
-        font-size: 20px;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .heading-title {
-        font-size: 80px;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .heading-title {
-        font-size: 50px;
-    }
-    .heading-subtitle {
-        font-size: 25px;
-    }
-}
-
-@media only screen and (max-width: 560px) {
-    .row {
-        margin-left: -15px;
-        margin-right: -15px;
-    }
-    .heading {
-        height: 210px;
-    }
-    .footer-section {
-        font-size: 16px;
-        height: 75px;
-    }
-    .footer-section {
-        background-position: 50% 94%;
-    }
-}
-
-
-/* ===================================================
 Star Ratings
 =================================================== */
 
@@ -589,4 +518,85 @@ Star Ratings
     font: 10px verdana, sans-serif;
     margin: 0 auto 40px auto;
     width: 180px;
+}
+
+
+/* ===================================================
+Media Queries for both pages
+=================================================== */
+
+@media only screen and (max-width: 1400px) {
+    .game-name {
+        font-size: 20px;
+    }
+    .thumbnail .caption {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .directions {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .thumbnail {
+        height: 660px;
+    }
+    .game-name {
+        font-size: 24px;
+    }
+    .thumbnail .caption {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 902px) {
+    .heading-title {
+        font-size: 80px;
+    }
+    .game-name {
+        font-size: 20px;
+    }
+    .thumbnail .caption {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .thumbnail {
+        min-width: 360px;
+    }
+    .game-name {
+        font-size: 24px;
+    }
+    .thumbnail .caption {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .heading-title {
+        font-size: 50px;
+    }
+    .heading-subtitle {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .heading {
+        height: 210px;
+    }
+    .footer-section {
+        font-size: 16px;
+        height: 75px;
+    }
+    .footer-section {
+        background-position: 50% 94%;
+    }
 }

@@ -77,16 +77,16 @@ $(document).ready(function() {
                 chosenGame.append("<div class='col-xs-4 col-md-4 text-justify'>" + "<div class='thumbnail'><br>" +
                 "<img id='thumb-img' src='" + data[i].img + "' /><br>" +
                 "<div class='caption'>" +
-                "<div>" + "<b>Game Name :</b><em> " + data[i].gameName + "</em></div>" +
-                "<div>" + "<b>Category :</b><em> " + data[i].name + "</em></div>" +
-                "<div>" + "<b>Age Range :</b><em> " + data[i].age_range + "</em></div>" +
-                "<div>" + "<b>Difficulty Level :</b><em> " + data[i].difficulty + "</em></div>" +
-                "<div>" + "<b>Minimum Players :</b><em> " + data[i].minPlayer + "</em></div>" +
-                "<div>" + "<b>Maximum Players :</b><em> " + data[i].maxPlayer + "</em></div>" +
-                "<div>" + "<b>Avg. Game Length :</b><em> " + data[i].timeToPlay + " mins.</em></div>" +
-                "<div>" + "<b>Manufacturer :</b><em> " + data[i].manufacturer + "</em></div>" +
-                "<div>" + "<b>Year :</b><em> " + data[i].year + "</em></div>" +
-                "<div>"+ "<b>Rating :</b> " + dynamic +"</div>" +
+                "<div class='game-name'>" + "<b>Game:</b><em> " + data[i].gameName + "</em></div>" +
+                "<div>" + "<b>Category:</b><em> " + data[i].name + "</em></div>" +
+                "<div>" + "<b>Age Range:</b><em> " + data[i].age_range + "</em></div>" +
+                "<div>" + "<b>Difficulty Level:</b><em> " + data[i].difficulty + "</em></div>" +
+                "<div>" + "<b>Minimum Players:</b><em> " + data[i].minPlayer + "</em></div>" +
+                "<div>" + "<b>Maximum Players:</b><em> " + data[i].maxPlayer + "</em></div>" +
+                "<div>" + "<b>Game Length:</b><em> " + data[i].timeToPlay + " minutes</em></div>" +
+                "<div>" + "<b>Manufacturer:</b><em> " + data[i].manufacturer + "</em></div>" +
+                "<div>" + "<b>Year:</b><em> " + data[i].year + "</em></div>" +
+                "<div>"+ "<b>Rating:</b> " + dynamic +"</div>" +
                 "</div></div></div>");
 
                 $(".game-area").append(chosenGame);
@@ -134,19 +134,19 @@ $(document).ready(function() {
                 for (var j =0; j<data[i].rating; j++){  
                     dynamic+="<img src='"+ 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png'+"'/>";
                     };
-                chosenGame.append("<div class='col-xs-4 col-md-4 text-justify'>" + "<div class='thumbnail'><br>" +
+                chosenGame.append("<div class='col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2 text-justify'>" + "<div class='thumbnail'><br>" +
                 "<img id='thumb-img' src='" + data[i].img + "' /><br>" +
                 "<div class='caption'>" +
-                "<div><b>" + "<b>Game Name :</b><em>  " + data[i].gameName + "</em></div>" +
-                "<div>" + "<b>Category :</b><em> " + data[i].category.name + "</em></div>" + 
-                "<div>" + "<b>Age Range :</b><em> " + data[i].age.age_range+"</em></div>" +
-                "<div>" + "<b>Difficulty Level :</b><em> " + data[i].difficulty + "</em></div>" +
-                "<div>" + "<b>Minimum Players :</b><em> " + data[i].minPlayer + "</em></div>" +
-                "<div>" + "<b>Maximum Players :</b><em> " + data[i].maxPlayer + "</em></div>" +
-                "<div>" + "<b>Avg. Game Length :</b><em> " + data[i].timeToPlay + " mins.</em></div>" +
-                "<div>" + "<b>Manufacturer :</b><em> " + data[i].manufacturer + "</em></div>" +
-                "<div>" + "<b>Year :</b><em> " + data[i].year + "</em></div>" +
-                "<div>"+ "<b>Rating :</b> " + dynamic +"</div>" +
+                "<div class='game-name'><b>" + "<b>Game:</b><br><em> " + data[i].gameName + "</em></div>" +
+                "<div>" + "<b>Category:</b><em> " + data[i].category.name + "</em></div>" + 
+                "<div>" + "<b>Age Range:</b><em> " + data[i].age.age_range+"</em></div>" +
+                "<div>" + "<b>Difficulty Level:</b><em> " + data[i].difficulty + "</em></div>" +
+                "<div>" + "<b>Minimum Players:</b><em> " + data[i].minPlayer + "</em></div>" +
+                "<div>" + "<b>Maximum Players:</b><em> " + data[i].maxPlayer + "</em></div>" +
+                "<div>" + "<b>Game Length:</b><em> " + data[i].timeToPlay + " minutes</em></div>" +
+                "<div>" + "<b>Manufacturer:</b><em> " + data[i].manufacturer + "</em></div>" +
+                "<div>" + "<b>Year:</b><em> " + data[i].year + "</em></div>" +
+                "<div>"+ "<b>Rating:</b> " + dynamic +"</div>" +
                 "</div></div></div>");
 
                 $(".game-area").append(chosenGame);
