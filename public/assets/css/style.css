@@ -65,7 +65,7 @@ body {
     color: black;
     text-align: center;
     text-shadow: 1px 1px 4px rgb(104, 79, 72);
-    margin-top: -10px;
+    margin: -10px 20px 20px 20px;
 }
 
 .rope-border-bottom {
@@ -84,6 +84,10 @@ body {
     background-size: cover;
 }
 
+.dropdown-ul {
+    padding-left: 0;
+}
+
 .full-dropdown {
     text-align: center;
 }
@@ -95,6 +99,7 @@ body {
     color: black;
     text-shadow: 1px 1px 4px rgb(104, 79, 72);
     text-align: center;
+    margin-bottom: 0;
 }
 
 .chosen-select {
@@ -109,6 +114,7 @@ body {
     background-color: white;
     color: rgb(175, 175, 175);
     padding-left: 10px;
+    margin-bottom: 10px;
     box-shadow: 0 10px 26px -10px black;
 }
 
@@ -116,48 +122,13 @@ option {
     color:black;
 }
 
+.search-form {
+    width: 80% !important;
+}
+
 h2 {
     font-family: 'Special Elite', cursive;
     font-weight: bold;
-}
-
-.modal-header {
-    background-color: #e83426d1;
-    padding-left: 60px;
-    padding-bottom: 15px;
-}
-
-.modal-body {
-    padding: 15px;
-}
-
-.thumbnail {
-    width: 100%;
-    height: 640px;
-    margin: 20px 0;
-    background: -webkit-linear-gradient(#e83426, #f7eb75, white);
-    box-shadow: 0 10px 9px 0 rgba(32, 32, 32, 0.8), 0 10px 53px 0 rgba(32, 32, 32, 0.8);
-    border: 3px solid rgb(110, 72, 57);
-    border-radius: 20px;
-    overflow: auto;
-}
-
-#thumb-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
-    background-color: white;
-    border: 3px solid rgb(110, 72, 57);
-}
-
-.game-name {
-    font-size: 24px;
-}
-
-.thumbnail .caption {
-    padding: 0px 20px;
-    font-family: 'Special Elite', cursive;
-    font-size: 18px;
 }
 
 .submit-col {
@@ -231,7 +202,7 @@ h2 {
 #submit-name-btn {
     width: 150px;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 60px;
     background-image: url("../img/sapphire.png");
     background-size: 200px;
@@ -264,6 +235,7 @@ h2 {
     font-size: 18px;
     text-transform: uppercase;
     color: black;
+    margin-bottom: 0;
     text-shadow: 1px 1px 4px rgb(104, 79, 72);
 }
 
@@ -284,7 +256,6 @@ h2 {
 
 .dropdown-li {
     display: inline;
-    margin-left: 20px;
 }
 
 img {
@@ -298,6 +269,49 @@ image1 {
 
 .wood-box {
     margin-bottom: 40px;
+}
+
+.modal-header {
+    background-color: #e83426d1;
+    padding-left: 60px;
+    padding-bottom: 15px;
+}
+
+.modal-body {
+    padding: 15px;
+}
+
+.game-results-title {
+    padding: 0 10px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 640px;
+    margin: 20px 0;
+    background: -webkit-linear-gradient(#e83426, #f7eb75, white);
+    box-shadow: 0 10px 9px 0 rgba(32, 32, 32, 0.8), 0 10px 53px 0 rgba(32, 32, 32, 0.8);
+    border: 3px solid rgb(110, 72, 57);
+    border-radius: 20px;
+    overflow: auto;
+}
+
+#thumb-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: white;
+    border: 3px solid rgb(110, 72, 57);
+}
+
+.game-name {
+    font-size: 24px;
+}
+
+.thumbnail .caption {
+    padding: 0px 20px;
+    font-family: 'Special Elite', cursive;
+    font-size: 18px;
 }
 
 .footer-section {
@@ -533,6 +547,7 @@ Media Queries for both pages
         font-size: 16px;
     }
 }
+
 @media only screen and (max-width: 1300px) {
     .directions {
         font-size: 20px;
@@ -565,7 +580,7 @@ Media Queries for both pages
 
 @media only screen and (max-width: 768px) {
     .thumbnail {
-        min-width: 360px;
+        height: 700px;
     }
     .game-name {
         font-size: 24px;
@@ -585,12 +600,20 @@ Media Queries for both pages
 }
 
 @media only screen and (max-width: 560px) {
-    .row {
-        margin-left: -15px;
-        margin-right: -15px;
-    }
     .heading {
         height: 210px;
+    }
+    #submit-btn {
+        width: 130px;
+        height: 80px;
+    }
+    #reset-btn {
+        width: 110px;
+        height: 80px;
+    }
+    #submit-name-btn {
+        width: 130px;
+        height: 80px;
     }
     .footer-section {
         font-size: 16px;
@@ -598,5 +621,18 @@ Media Queries for both pages
     }
     .footer-section {
         background-position: 50% 94%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .outter-box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .game-name {
+        font-size: 20px;
+    }
+    .thumbnail .caption {
+        font-size: 16px;
     }
 }

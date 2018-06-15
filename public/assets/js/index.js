@@ -67,14 +67,14 @@ $(document).ready(function() {
         else {
             var chosenGame = $("<div>");
             chosenGame.append("<div class='row display-flex'>" + "</div>");
-            chosenGame.append("<h2 class='text-center'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
+            chosenGame.append("<h2 class='text-center game-results-title'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
 
             for (var i = 0; i < data.length; i++) {
                 var dynamic="";
                 for (var j =0; j<data[i].rating; j++){  
                     dynamic+="<img src='"+ 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png'+"'/>";
                 };
-                chosenGame.append("<div class='col-xs-4 col-md-4 text-justify'>" + "<div class='thumbnail'><br>" +
+                chosenGame.append("<div class='col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0 text-justify card-box'>" + "<div class='thumbnail'><br>" +
                 "<img id='thumb-img' src='" + data[i].img + "' /><br>" +
                 "<div class='caption'>" +
                 "<div class='game-name'>" + "<b>Game:</b><em> " + data[i].gameName + "</em></div>" +
@@ -127,14 +127,14 @@ $(document).ready(function() {
             
             var chosenGame = $("<div>");
             chosenGame.append("<div class='row'>" + "</div>");
-            chosenGame.append("<h2 class='text-center'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
+            chosenGame.append("<h2 class='text-center game-results-title'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
 
             for (var i = 0; i < data.length; i++) {
                 var dynamic="";
                 for (var j =0; j<data[i].rating; j++){  
                     dynamic+="<img src='"+ 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png'+"'/>";
                     };
-                chosenGame.append("<div class='col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2 text-justify'>" + "<div class='thumbnail'><br>" +
+                chosenGame.append("<div class='col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0 text-justify card-box'>" + "<div class='thumbnail'><br>" +
                 "<img id='thumb-img' src='" + data[i].img + "' /><br>" +
                 "<div class='caption'>" +
                 "<div class='game-name'><b>" + "<b>Game:</b><br><em> " + data[i].gameName + "</em></div>" +
