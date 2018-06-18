@@ -122,6 +122,7 @@ $(document).ready(function() {
         if (data.length < 1) {
             // alert("There is no games in your search parameters");
             $("#no-games-found-modal").modal("show");
+            console.log("modal code should be working");
         }
         else {        
             
