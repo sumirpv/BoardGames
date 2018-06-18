@@ -45,7 +45,12 @@ $(document).ready(function() {
     // Search DB by Game Name
     $("#submit-name-btn").on("click", function(event) {
         // event.preventDefault();
+        
         var nameToSearch = $("#game-name").val().trim();
+            if ($("#game-name").val().trim() === "") {
+                console.log("null");
+                $("#no-search-name-modal").modal("show");
+            }
         $.post("/api/boardGames/" + nameToSearch, function(data) {
             var gamesArray = [];
             var nameArray = [];
@@ -99,6 +104,11 @@ $(document).ready(function() {
         $('html, body').animate({ scrollTop: 0 }, 'slow');
     });
 
+    // Close modal animation ("no-search-name-modal" modal)
+    $("#name-modal-close-btn").on("click", function(event) {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    });
+
     // Clear button animation
     $("#reset-btn").on("click", function(event) {
         $('html, body').animate({ scrollTop: 0 }, 'slow');
@@ -122,7 +132,6 @@ $(document).ready(function() {
         if (data.length < 1) {
             // alert("There is no games in your search parameters");
             $("#no-games-found-modal").modal("show");
-            console.log("modal code should be working");
         }
         else {        
             

@@ -281,6 +281,10 @@ image1 {
     padding: 15px;
 }
 
+#no-search-name-header {
+    background-color: #f7eb75;
+}
+
 .game-results-title {
     padding: 0 10px;
 }
