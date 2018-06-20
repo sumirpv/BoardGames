@@ -30,7 +30,7 @@ Please note, that the Board Game Discovery database is very small so there are n
 * Category : Family
 * Age Group : Less than 8 yrs old
 * Difficulty : Intermediate
-* # of Players : 4
+* Number of Players : 4
 * Game Length : 20 - 29 min.
 
 In order to add a game to the database, simply click on the "Add A Game" icon on the bottom of the home page and you will be redirected to the "Add A Game" page. Complete all form fields and click the "Add Game" button.
@@ -41,6 +41,8 @@ Enjoy discovering new board games and never be bored again!
 
 ## Home Page
 
+![image]
+(https://github.com/bmison/Project2/blob/master/public/assets/img/Board%20Game%20Discovery%20-%20Home%20Page.png)
 
 ## Single Filter Search Results
 
@@ -54,7 +56,7 @@ Enjoy discovering new board games and never be bored again!
 ## Add a Game
 
 
-## Authors:-
+## Authors:
 
 * Ryan Noble
 * Sumitha Viswanathan
