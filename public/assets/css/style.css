@@ -119,7 +119,7 @@ body {
     background-color: white;
     color: rgb(175, 175, 175);
     padding-left: 10px;
-    /* margin-bottom: 10px; */
+    padding-top: 5px;
     box-shadow: 0 10px 26px -10px black;
 }
 
@@ -292,6 +292,7 @@ image1 {
 
 .game-results-title {
     padding: 0 10px;
+    font-family: 'Special Elite', cursive;
 }
 
 .thumbnail {
@@ -413,6 +414,7 @@ Add Game Page
     border: 2px solid rgb(110, 72, 57);
     border-radius: 10px;
     font-size: 18px;
+    padding-top: 10px;
     margin: 0 auto;
     background-color: white;
     box-shadow: 0 8px 26px -10px black;
@@ -426,6 +428,7 @@ Add Game Page
     border-radius: 10px;
     font-size: 18px;
     width: 90%;
+    padding-top: 15px;
     margin: 0 auto;
     background-color: white;
     box-shadow: 0 8px 26px -10px black;
