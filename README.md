@@ -46,15 +46,23 @@ Enjoy discovering new board games and never be bored again!
 
 ## Single Filter Search Results
 
+![image]
+(https://github.com/bmison/Project2/blob/master/public/assets/img/Board%20Game%20Discovery%20-%20Filter%20Results.png)
 
 ## All 5 Filter Search Results (Jenga)
 
+![image]
+(https://github.com/bmison/Project2/blob/master/public/assets/img/Board%20Game%20Discovery%20-%20Jenga%20Search.png)
 
 ## Search By Game Name
 
+![image]
+(https://github.com/bmison/Project2/blob/master/public/assets/img/Board%20Game%20Discovery%20-%20Twister%20-%20Name%20Search.png)
 
 ## Add a Game
 
+![image]
+(https://github.com/bmison/Project2/blob/master/public/assets/img/Board%20Games%20Discovery%20-%20Add%20Game.png)
 
 ## Authors:
 
