@@ -10,8 +10,8 @@ body {
 }
 
 .row {
-    margin-left: 0;
-    margin-right: 0;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 
 .heading {
@@ -45,8 +45,8 @@ body {
 }
 
 .container-fluid {
-    padding-left: 0;
-    padding-right: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
 .dropdown-container.container-fluid.wood-box {
@@ -411,7 +411,7 @@ Add Game Page
     font-family: 'Special Elite', cursive;
     font-weight: bold;
     border: 2px solid rgb(110, 72, 57);
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 18px;
     margin: 0 auto;
     background-color: white;
@@ -423,7 +423,7 @@ Add Game Page
     font-family: 'Special Elite', cursive;
     font-weight: bold;
     border: 2px solid rgb(110, 72, 57);
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 18px;
     width: 90%;
     margin: 0 auto;
