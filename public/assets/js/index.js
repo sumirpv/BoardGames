@@ -48,7 +48,7 @@ $(document).ready(function() {
         
         var nameToSearch = $("#game-name").val().trim();
             if ($("#game-name").val().trim() === "") {
-                console.log("null");
+                // console.log("null");
                 $("#no-search-name-modal").modal("show");
             }
         $.post("/api/boardGames/" + nameToSearch, function(data) {
@@ -95,9 +95,10 @@ $(document).ready(function() {
                 "</div></div></div>");
 
                 $(".game-area").append(chosenGame);
+
             }
         }
-    }
+    };
 
     // Close modal animation
     $("#modal-close-btn").on("click", function(event) {
