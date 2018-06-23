@@ -45,10 +45,10 @@ $(document).ready(function() {
     // Search DB by Game Name
     $("#submit-name-btn").on("click", function(event) {
         event.preventDefault();
-        
+        console.log("Trying in the search Name");
         var nameToSearch = $("#game-name").val().trim();
             if ($("#game-name").val().trim() === "") {
-                // console.log("null");
+                 //console.log("null");
                 $("#no-search-name-modal").modal("show");
             }
         $.post("/api/boardGames/" + nameToSearch, function(data) {
@@ -60,6 +60,8 @@ $(document).ready(function() {
                     gamesArray.push(data[i]);
                 }
             }
+                    $("#game-name").val("");
+
             renderGamesIndividual(gamesArray, "GAME NAME", nameToSearch);
         })
     });
@@ -137,7 +139,7 @@ $(document).ready(function() {
         else {        
             
             var chosenGame = $("<div>");
-            chosenGame.append("<div class='row'>" + "</div>");
+            chosenGame.append("<div class='row display-flex'>" + "</div>");
             chosenGame.append("<h2 class='text-center game-results-title'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
 
             for (var i = 0; i < data.length; i++) {
@@ -269,6 +271,7 @@ $(document).ready(function() {
     // Searches DB using all search parameters
     $("#submit-btn").on("click", function(event) {
 
+        console.log("Trying in the search Name");
 
         // var categoryid = $("#category").val().trim();
         // var ageid = $("#age").val().trim();
