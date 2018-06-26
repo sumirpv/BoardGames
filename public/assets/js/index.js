@@ -1,5 +1,43 @@
 $(document).ready(function() {
 
+     // Function that renders games using the boardGames, categories, and age models
+     function renderGamesIndividual(data, filterCategory, selectedFilter) {
+        $(".game-area").children().text("");
+
+        if (data.length < 1) {
+            // alert("There are no games in your search parameters");
+            $("#no-games-found-modal").modal("show");
+        }
+        else {        
+            
+            var chosenGame = $("<div>");
+            chosenGame.append("<div class='row'>" + "</div>");
+            chosenGame.append("<h2 class='text-center game-results-title'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
+
+            for (var i = 0; i < data.length; i++) {
+                var dynamic="";
+                for (var j =0; j<data[i].rating; j++){  
+                    dynamic+="<img src='"+ 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png'+"'/>";
+                    };
+                chosenGame.append("<div class='col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0 text-justify card-box'>" + "<div class='thumbnail'><br>" +
+                "<img id='thumb-img' src='" + data[i].img + "' /><br>" +
+                "<div class='caption'>" +
+                "<div class='game-name'><b>" + "<b>Game:</b><br><em> " + data[i].gameName + "</em></div>" +
+                "<div>" + "<b>Category:</b><em> " + data[i].category.name + "</em></div>" + 
+                "<div>" + "<b>Age Range:</b><em> " + data[i].age.age_range+"</em></div>" +
+                "<div>" + "<b>Difficulty Level:</b><em> " + data[i].difficulty + "</em></div>" +
+                "<div>" + "<b>Minimum Players:</b><em> " + data[i].minPlayer + "</em></div>" +
+                "<div>" + "<b>Maximum Players:</b><em> " + data[i].maxPlayer + "</em></div>" +
+                "<div>" + "<b>Game Length:</b><em> " + data[i].timeToPlay + " minutes</em></div>" +
+                "<div>" + "<b>Manufacturer:</b><em> " + data[i].manufacturer + "</em></div>" +
+                "<div>" + "<b>Year:</b><em> " + data[i].year + "</em></div>" +
+                "<div>"+ "<b>Rating:</b> " + dynamic +"</div>" +
+                "</div></div></div>");
+
+                $(".game-area").append(chosenGame);
+            }
+        }
+    }
     // Displays game ratings from the DB
     $('.ratings_stars').hover(
         // Handles the mouseover
@@ -44,7 +82,7 @@ $(document).ready(function() {
 
     // Search DB by Game Name
     $("#submit-name-btn").on("click", function(event) {
-        // event.preventDefault();
+        event.preventDefault();
         
         var nameToSearch = $("#game-name").val().trim();
             if ($("#game-name").val().trim() === "") {
@@ -125,44 +163,7 @@ $(document).ready(function() {
         }
     }
 
-    // Function that renders games using the boardGames, categories, and age models
-    function renderGamesIndividual(data, filterCategory, selectedFilter) {
-        $(".game-area").children().text("");
-
-        if (data.length < 1) {
-            // alert("There is no games in your search parameters");
-            $("#no-games-found-modal").modal("show");
-        }
-        else {        
-            
-            var chosenGame = $("<div>");
-            chosenGame.append("<div class='row'>" + "</div>");
-            chosenGame.append("<h2 class='text-center game-results-title'>Current search results are being filtered by: <br>" + filterCategory + " > " + selectedFilter);
-
-            for (var i = 0; i < data.length; i++) {
-                var dynamic="";
-                for (var j =0; j<data[i].rating; j++){  
-                    dynamic+="<img src='"+ 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-full-icon.png'+"'/>";
-                    };
-                chosenGame.append("<div class='col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0 text-justify card-box'>" + "<div class='thumbnail'><br>" +
-                "<img id='thumb-img' src='" + data[i].img + "' /><br>" +
-                "<div class='caption'>" +
-                "<div class='game-name'><b>" + "<b>Game:</b><br><em> " + data[i].gameName + "</em></div>" +
-                "<div>" + "<b>Category:</b><em> " + data[i].category.name + "</em></div>" + 
-                "<div>" + "<b>Age Range:</b><em> " + data[i].age.age_range+"</em></div>" +
-                "<div>" + "<b>Difficulty Level:</b><em> " + data[i].difficulty + "</em></div>" +
-                "<div>" + "<b>Minimum Players:</b><em> " + data[i].minPlayer + "</em></div>" +
-                "<div>" + "<b>Maximum Players:</b><em> " + data[i].maxPlayer + "</em></div>" +
-                "<div>" + "<b>Game Length:</b><em> " + data[i].timeToPlay + " minutes</em></div>" +
-                "<div>" + "<b>Manufacturer:</b><em> " + data[i].manufacturer + "</em></div>" +
-                "<div>" + "<b>Year:</b><em> " + data[i].year + "</em></div>" +
-                "<div>"+ "<b>Rating:</b> " + dynamic +"</div>" +
-                "</div></div></div>");
-
-                $(".game-area").append(chosenGame);
-            }
-        }
-    }
+   
 
     // Searches DB based off of the category input ONLY
     // $('#category').change(function() { 

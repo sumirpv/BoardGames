@@ -105,6 +105,7 @@ body {
     text-shadow: 1px 1px 4px rgb(104, 79, 72);
     text-align: center;
     margin-bottom: 0;
+    margin-top: 10px;
 }
 
 .chosen-select {
@@ -639,12 +640,25 @@ Media Queries for both pages
         width: 130px;
         height: 80px;
     }
+    .form-control {
+        width: 100%;
+    }
+    .chosen-select {
+        width: 100%;
+    }
+    .enter-game-section {
+        padding: 55px;
+    }
     .footer-section {
         font-size: 16px;
         height: 75px;
     }
     .footer-section {
         background-position: 50% 94%;
+    }
+    .outter-box {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
