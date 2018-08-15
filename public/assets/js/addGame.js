@@ -54,6 +54,8 @@ $(document).ready(function() {
 
     // Submits a new post and brings user to home page upon completion
     function submitGame(game) {
+        alert(" its workinh");
+        console.log("yeah working adding");
         $.post("/api/boardGamesSubmit", game, function() {
             alert("Added game successfully to database");
             location.reload();
