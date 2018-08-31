@@ -1,10 +1,16 @@
 $(document).ready(function() {
 
+   
+
     var createGameForm = $("#create-game");
 
+
+   
     // Adding an event listener for when the form is submitted
     $(createGameForm).on("submit", handleFormSubmit);
 
+
+   
     // Function for handling what happens when the form to create a new post is submitted
     function handleFormSubmit(event) {
         event.preventDefault();
@@ -61,4 +67,5 @@ $(document).ready(function() {
             location.reload();
         });
     }
+
 })

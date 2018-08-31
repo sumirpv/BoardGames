@@ -82,8 +82,8 @@ $(document).ready(function() {
 
     // Search DB by Game Name
     $("#submit-name-btn").on("click", function(event) {
-        // event.preventDefault();
-        
+         event.preventDefault();
+        console.log("testing");
         var nameToSearch = $("#game-name").val().trim();
             if ($("#game-name").val().trim() === "") {
                 console.log("null");
